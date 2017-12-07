@@ -48,6 +48,7 @@ Your coins will be safe if the masternode server is hacked.
 ### 2.3 Automatic Masternode Setup
 1. Download [putty](https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.70-installer.msi)
 1. Start putty and login as root user. (Root password and server ip address is in vultr overview tab)
+1. Update the system: `apt-get update && apt-get upgrade`
 1. Paste this command and answer the questions:
 ```
 apt-get install -y python ; rm vivo.py; wget https://raw.githubusercontent.com/u3mur4/vivo/master/vivo.py && python vivo.py
