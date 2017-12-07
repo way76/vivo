@@ -15,7 +15,7 @@ SENTINEL_GIT_URL = "https://github.com/vivocoin/sentinel.git"
 MN_USERNAME = "mn1"
 MN_PORT = 12845
 MN_RPCPORT = 12800
-MN_NODELIST = "https://pastebin.com/raw/fsd2Acm0"
+MN_NODELIST = urlopen('https://pastebin.com/raw/fsd2Acm0').read()
 
 MN_LFOLDER = ".vivocore"
 MN_WFOLDER = "VivoCore"
