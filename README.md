@@ -25,7 +25,7 @@ Your coins will be safe if the masternode server is hacked.
 ### 1.1 Setting up desktop wallet
 1. Download and extract the wallet: [win-x64](https://github.com/vivocoin/vivo/releases/download/v0.12.1.7/vivo-0.12.1.7-win64.zip), [win-x32](https://github.com/vivocoin/vivo/releases/download/v0.12.1.7/vivo-0.12.1.7-win32.zip), [linux-x64](https://github.com/vivocoin/vivo/releases/download/v0.12.1.7/vivo-0.12.1.7-ubuntu14.04.tar.xz), [osx](https://github.com/vivocoin/vivo/releases/download/v0.12.1.7/vivo-0.12.1.7-osx.dmg) [wallet-github](https://github.com/vivocoin/vivo/releases)
 1. Start the wallet (vivo-qt) and select the default data directory. After close the wallet. (This creates the folder structure)
-1. Optionally download [blockchain.rar]() file for faster synchronization and extract it to `%appdata%/VivoCore/` folder. Override the necessary files.
+1. Optionally download [blockchain.rar](https://mega.nz/#!RjIGABhT!Ak1yl_WOGjvmsOfP4vcJbu8whWXaVDgztK_o4VV22Rg) file for faster synchronization and extract it to `%appdata%/VivoCore/` folder. Override the necessary files.
 1. Start the wallet again and wait for the synchronization. (10min to 1h)
 1. You can optionaly encrypt the wallet (Settings => Encypt wallet) for security reasons. Do not forget the password or you lose the coins that you have.
 1. Backup `%appdata%/TerracoinCore/wallet.dat` file. This contains your coins. DO NOT LOSE IT!
