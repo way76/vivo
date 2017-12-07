@@ -187,12 +187,16 @@ masternodeprivkey={}
         f.write(config)
         
     print_info("Downloading blockchain file...")
-    run_command("apt-get --assume-yes install wget")
-    run_command_as(MN_USERNAME, "cd && wget --continue {}".format(BOOTSTRAP_URL))
+    run_command("apt-get --assume-yes install wget libtool libglib2.0-dev gobject-introspection libgmp3-dev nettle-dev asciidoc glib-networking openssl libcurl4-openssl-dev libssl-dev")
+    run_command("wget https://megatools.megous.com/builds/megatools-1.9.98.tar.gz")
+    run_command("tar -xvf megatools-1.9.98.tar.gz")
+    run_command("cd megatools-1.9.98 && ./configure && make && make install")
+    
+    filename = "blockchain.rar"
+    run_command_as(MN_USERNAME, "cd && megadl '{}' --path {}".format(BOOTSTRAP_URL, filename))
     
     print_info("Unzipping the file...")
     run_command("apt-get --assume-yes install unrar")
-    filename = BOOTSTRAP_URL[BOOTSTRAP_URL.rfind('/')+1:]
     run_command_as(MN_USERNAME, "cd && unrar x -u {} {}".format(filename, MN_LFOLDER))
        
     os.system('su - {} -c "{}" '.format(MN_USERNAME, MN_DAEMON + ' -daemon'))
