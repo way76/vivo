@@ -62,7 +62,7 @@ apt-get install -y python ; rm vivo.py; wget https://raw.githubusercontent.com/u
 - setup some cronjob for automatized jobs (autostart masternode on system start, run sentinel every minutes, etc...)
 
 ### 2.4 Add masternode to the desktop wallet
-1. Open `%appdata%/VivoCore/vivo.conf` and add a new line to it. The line format is:<br> 'AliasName ServerIP:ServerPort PrivateKey TransactionID TransactionIndex'
+1. Open `%appdata%/VivoCore/masternode.conf` and add a new line to it. The line format is:<br> 'AliasName ServerIP:ServerPort PrivateKey TransactionID TransactionIndex'
 1. Open the wallet, wait for synchronization, unlock the wallet
 1. Go to Masternodes tab (Setting => Options => Wallet => Show Masternode Tab)
 1. Click Start All
