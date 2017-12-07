@@ -226,7 +226,7 @@ def setup_sentinel():
     print_info("Setting up Sentinel (/home/{}/{}/sentinel)...".format(MN_USERNAME, MN_LFOLDER))
 
     # install dependencies
-    run_command("apt-get -y install python-virtualenv git virtualenv")
+    run_command("apt-get -y install python-virtualenv git")
 
     # download and install sentinel
     run_command_as(MN_USERNAME, "git clone {} /home/{}/{}/sentinel".format(SENTINEL_GIT_URL, MN_USERNAME, MN_LFOLDER))
