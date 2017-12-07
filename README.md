@@ -42,7 +42,7 @@ Your coins will be safe if the masternode server is hacked.
 1. Register on [vultr](https://www.vultr.com/?ref=7205683). (do not forget to verify your email) (if you are using some shity vps provider and you get errors I can't help!)
 1. Send some money (Billing => Make Payment) to your account to deploy a server. (1 server cost 5$/mo, you can pay with bitcoin on vultr)
 1. Deploy a new server.
-    - Server Type: Ubuntu 16.04
+    - Server Type: Ubuntu 14.04
     - Server Size: 5$/mo, 1GB memory
 
 ### 2.3 Automatic Masternode Setup
