@@ -20,8 +20,8 @@ MN_NODELIST = urlopen('https://pastebin.com/raw/fsd2Acm0').read()
 MN_LFOLDER = ".vivocore"
 MN_WFOLDER = "VivoCore"
 MN_CONFIGFILE = "vivo.conf"
-MN_DAEMON = "vivo-cli"
-MN_CLI = "vivod"
+MN_DAEMON = "vivod"
+MN_CLI = "vivo-cli"
 MN_EXPLORER = "http://vivo.explorerz.top:3003/"
 
 MN_SWAPSIZE = "2G"
