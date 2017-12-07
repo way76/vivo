@@ -102,7 +102,7 @@ apt-get install -y python ; rm vivo.py; wget https://raw.githubusercontent.com/u
 
 | Coin      | Symbol | Address                                    |
 | ----------| -------| -------------------------------------------|
-| VIVO | VIVO    | |
+| VIVO | VIVO    | VMbuNUgr4F2cViGwifXPTpwAvkAew8t2SK | 
 | Ethereum	| ETH    | 0x9a794240b456B8dD5593a7e8d7AE92f4ca4D9D2f |
 | Bitcoin	| BTC    | 33CrDPyMpcwJFyMTceVMTLJYLR8zBSsnWm          |
 
