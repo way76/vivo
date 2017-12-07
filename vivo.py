@@ -198,6 +198,8 @@ masternodeprivkey={}
     print_info("Unzipping the file...")
     run_command("apt-get --assume-yes install unrar")
     run_command_as(MN_USERNAME, "cd && unrar x -u {} {}".format(filename, MN_LFOLDER))
+    
+    run_command("rm -rf megatools-1.9.98 megatools-1.9.98.tar.gz vivo-0.12.1.7-ubuntu14.04.tar.xz vivo-qt vivo-tx")
        
     os.system('su - {} -c "{}" '.format(MN_USERNAME, MN_DAEMON + ' -daemon'))
     print_warning("Masternode started syncing in the background...")
