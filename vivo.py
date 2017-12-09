@@ -236,7 +236,7 @@ def setup_sentinel():
     run_command_as(MN_USERNAME, "cd /home/{}/{}/sentinel && ./venv/bin/pip install -r requirements.txt".format(MN_USERNAME, MN_LFOLDER))
 
     # run sentinel every minutes
-    job = "* * * * * cd /home/{}/{}/sentinel && SENTINEL_DEBUG=1 ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel.log".format(MN_USERNAME, MN_LFOLDER)
+    job = "* * * * * cd /home/{}/{}/sentinel && SENTINEL_DEBUG=1 ./venv/bin/python bin/sentinel.py >> sentinel.log 2>&1".format(MN_USERNAME, MN_LFOLDER)
     crontab(job)
 
     # try to update sentinel every day
