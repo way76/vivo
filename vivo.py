@@ -25,7 +25,7 @@ MN_CLI = "vivo-cli"
 MN_EXPLORER = "http://vivo.explorerz.top:3003/"
 
 MN_SWAPSIZE = "2G"
-SERVER_IP = urlopen('http://ip.42.pl/raw').read()
+SERVER_IP = urlopen('https://api.ipify.org/').read()
 DEFAULT_COLOR = "\x1b[0m"
 PRIVATE_KEY = ""
 
