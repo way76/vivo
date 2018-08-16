@@ -9,7 +9,7 @@ import os
 import time
 from urllib2 import urlopen
 
-BOOTSTRAP_URL = "https://mega.nz/#!RjIGABhT!Ak1yl_WOGjvmsOfP4vcJbu8whWXaVDgztK_o4VV22Rg"
+BOOTSTRAP_URL = "https://mega.nz/#!Ui4kyQRI!zJdUjPvZXDMGMOCMQQq_jaRUCxsoTByWlJ4rB0pfp-Y"
 SENTINEL_GIT_URL = "https://github.com/vivocoin/sentinel.git"
 
 MN_USERNAME = "mn1"
