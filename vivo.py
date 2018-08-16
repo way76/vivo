@@ -144,11 +144,11 @@ def setup_wallet():
     run_command("apt-get --assume-yes install git unzip libdb4.8-dev libdb4.8++-dev")
 
     print_info("Downloading wallet...")
-    run_command("wget https://github.com/vivocoin/vivo/releases/download/v0.12.1.7/vivo-0.12.1.7-ubuntu14.04.tar.xz")
-    run_command("tar -xvf vivo-0.12.1.7-ubuntu14.04.tar.xz")
+    run_command("wget https://github.com/vivocoin/vivo/releases/download/v0.12.1.8/Vivo-0.12.1.8-ubuntu16.04.tar.gz")
+    run_command("tar -xvf Vivo-0.12.1.8-ubuntu16.04.tar.gz")
 
-    run_command("mv vivod /usr/local/bin/{}".format(MN_DAEMON))
-    run_command("mv vivo-cli /usr/local/bin/{}".format(MN_CLI))
+    run_command("mv vivo/vivod /usr/local/bin/{}".format(MN_DAEMON))
+    run_command("mv vivo/vivo-cli /usr/local/bin/{}".format(MN_CLI))
 
 def setup_masternode():
     print_info("Setting up masternode...")
