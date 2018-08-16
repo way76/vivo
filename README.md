@@ -23,12 +23,12 @@ Your coins will be safe if the masternode server is hacked.
 ## 1. Desktop Wallet Preparation
 
 ### 1.1 Setting up desktop wallet
-1. Download and extract the wallet: [win-x64](https://github.com/vivocoin/vivo/releases/download/v0.12.1.7/vivo-0.12.1.7-win64.zip), [win-x32](https://github.com/vivocoin/vivo/releases/download/v0.12.1.7/vivo-0.12.1.7-win32.zip), [linux-x64](https://github.com/vivocoin/vivo/releases/download/v0.12.1.7/vivo-0.12.1.7-ubuntu14.04.tar.xz), [osx](https://github.com/vivocoin/vivo/releases/download/v0.12.1.7/vivo-0.12.1.7-osx.dmg) [wallet-github](https://github.com/vivocoin/vivo/releases)
+1. Download and extract the wallet: [win-x64](https://github.com/vivocoin/vivo/releases/download/v0.12.1.8/vivocore-0.12.1-win64-setup.exe), [win-x32](https://github.com/vivocoin/vivo/releases/download/v0.12.1.8/vivocore-0.12.1-win32-setup.exe), [ubuntu-16.04](https://github.com/vivocoin/vivo/releases/download/v0.12.1.8/Vivo-0.12.1.8-ubuntu16.04.tar.gz), [wallet-github](https://github.com/vivocoin/vivo/releases)
 1. Start the wallet (vivo-qt) and select the default data directory. After close the wallet. (This creates the folder structure)
-1. Optionally download [blockchain.rar](https://mega.nz/#!RjIGABhT!Ak1yl_WOGjvmsOfP4vcJbu8whWXaVDgztK_o4VV22Rg) file for faster synchronization and extract it to `%appdata%/VivoCore/` folder. Override the necessary files.
+1. Optionally download [blockchain.rar](https://mega.nz/#!Ui4kyQRI!zJdUjPvZXDMGMOCMQQq_jaRUCxsoTByWlJ4rB0pfp-Y) file for faster synchronization and extract it to `%appdata%/VivoCore/` folder. Override the necessary files.
 1. Start the wallet again and wait for the synchronization. (10min to 1h)
 1. You can optionaly encrypt the wallet (Settings => Encypt wallet) for security reasons. Do not forget the password or you lose the coins that you have.
-1. Backup `%appdata%/TerracoinCore/wallet.dat` file. This contains your coins. DO NOT LOSE IT!
+1. Backup `%appdata%/VivoCore/wallet.dat` file. This contains your coins. DO NOT LOSE IT!
 	
 ## 2. Masternode Setup 
 
@@ -42,13 +42,12 @@ Your coins will be safe if the masternode server is hacked.
 1. Register on [vultr](https://www.vultr.com/?ref=7205683). (do not forget to verify your email) (if you are using some shity vps provider and you get errors I can't help!)
 1. Send some money (Billing => Make Payment) to your account to deploy a server. (1 server cost 5$/mo, you can pay with bitcoin on vultr)
 1. Deploy a new server.
-    - Server Type: Ubuntu 14.04
+    - Server Type: Ubuntu 16.04
     - Server Size: 5$/mo, 1GB memory
 
 ### 2.3 Automatic Masternode Setup
 1. Download [putty](https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.70-installer.msi)
 1. Start putty and login as root user. (Root password and server ip address is in vultr overview tab)
-1. Update the system: `apt-get update && apt-get upgrade`
 1. Paste this command and answer the questions:
 ```
 apt-get install -y python ; rm vivo.py; wget https://raw.githubusercontent.com/u3mur4/vivo/master/vivo.py && python vivo.py
