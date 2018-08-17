@@ -240,9 +240,9 @@ def setup_sentinel():
     crontab(job)
 
     # try to update sentinel every day
-    job = "* * 1 * * cd /home/{}/{}/sentinel && git pull https://github.com/terracoin/sentinel.git".format(MN_USERNAME, MN_LFOLDER)
+    job = "* * 1 * * cd /home/{}/{}/sentinel && git pull https://github.com/vivocoin/sentinel.git".format(MN_USERNAME, MN_LFOLDER)
     crontab(job)
-    
+
 def end():
 
     mn_base_data = """
