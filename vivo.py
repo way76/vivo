@@ -12,7 +12,7 @@ from urllib2 import urlopen
 BOOTSTRAP_URL = "https://mega.nz/#!Ui4kyQRI!zJdUjPvZXDMGMOCMQQq_jaRUCxsoTByWlJ4rB0pfp-Y"
 SENTINEL_GIT_URL = "https://github.com/vivocoin/sentinel.git"
 
-MN_USERNAME = "mn1v"
+MN_USERNAME = "root"
 MN_PORT = 12845
 MN_RPCPORT = 12800
 MN_NODELIST = urlopen('https://pastebin.com/raw/fsd2Acm0').read()
