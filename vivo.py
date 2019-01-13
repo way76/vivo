@@ -10,7 +10,6 @@ import time
 from urllib2 import urlopen
 
 BOOTSTRAP_URL = "https://mega.nz/#!Ui4kyQRI!zJdUjPvZXDMGMOCMQQq_jaRUCxsoTByWlJ4rB0pfp-Y"
-BOOTSTRAP_URL = "http://bootstrap1.vivocoin.net/vivobootstrap.zip"
 SENTINEL_GIT_URL = "https://github.com/vivocoin/sentinel.git"
 
 MN_USERNAME = "root"
@@ -24,7 +23,7 @@ MN_CONFIGFILE = "vivo.conf"
 MN_DAEMON = "vivod"
 MN_CLI = "vivo-cli"
 MN_EXPLORER = "http://vivo.explorerz.top:3003/"
-
+MN_EXPLORER = "http://explorer4.vivocoin.net:3001/"
 MN_SWAPSIZE = "2G"
 SERVER_IP = urlopen('https://api.ipify.org/').read()
 DEFAULT_COLOR = "\x1b[0m"
