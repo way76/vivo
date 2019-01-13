@@ -10,6 +10,7 @@ import time
 from urllib2 import urlopen
 
 BOOTSTRAP_URL = "https://mega.nz/#!Ui4kyQRI!zJdUjPvZXDMGMOCMQQq_jaRUCxsoTByWlJ4rB0pfp-Y"
+BOOTSTRAP_URL = "http://bootstrap1.vivocoin.net/vivobootstrap.zip"
 SENTINEL_GIT_URL = "https://github.com/vivocoin/sentinel.git"
 
 MN_USERNAME = "root"
