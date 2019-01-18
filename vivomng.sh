@@ -8,14 +8,17 @@ MNBLOCK=$(cd /usr/local/bin && su mnv -c 'vivo-cli getblockcount')
 checkBlock(){
 #MNBLOCK=$(cd /usr/local/bin &&./vivo-cli getblockcount)
 #sleep 2
-echo "$(date +%F_%T) Verifying block height.." >> vivochecker.log
-echo "$(date +%F_%T) Masternode Block $MNBLOCK.."  >> vivochecker.log
-echo "$(date +%F_%T) Explorer Block $EXPBLOCK.."  >> vivochecker.log
+echo "$(date +%F_%T) Update #############################################.."  >> vivomng.log
+echo "$(date +%F_%T) Verifying block height.." >> vivomng.log
+echo "$(date +%F_%T) Masternode Block $MNBLOCK.."  >> vivomng.log
+echo "$(date +%F_%T) Explorer Block $EXPBLOCK.."  >> vivomng.log
+
+
 if [ "$MNBLOCK" -ge "$EXPBLOCKLOW" ] && [ "$MNBLOCK" -le "$EXPBLOCKHIGH" ]; then
-  echo "$(date +%F_%T) Block height matches!"  >> vivochecker.log
+  echo "$(date +%F_%T) Block height matches!"  >> vivomng.log
   #complete
 else
-  echo "$(date +%F_%T) Block mismatch, updating.."  >> vivochecker.log
+  echo "$(date +%F_%T) Block mismatch, updating..."  >> vivomng.log
     reinizializza
 #  doubleCheckBlock
 fi
