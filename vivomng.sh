@@ -18,7 +18,7 @@ if [ "$MNBLOCK" -ge "$EXPBLOCKLOW" ] && [ "$MNBLOCK" -le "$EXPBLOCKHIGH" ]; then
   echo "$(date +%F_%T) Block height matches!"  >> vivomng.log
   #complete
 else
-  echo "$(date +%F_%T) Block mismatch, updating..."  >> vivomng.log
+  echo "$(date +%F_%T) Block mismatch, updating------------------------------------------------"  >> vivomng.log
     reinizializza
 #  doubleCheckBlock
 fi
