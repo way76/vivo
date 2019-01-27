@@ -70,7 +70,7 @@ echo $LS
 ###########################################################################
 ###########################################################################
 Calcola_LP_Stone(){
-LP=$('stone-cli masternodelist lastpaidblock | grep -e $1')
+LP=$(stone-cli masternodelist lastpaidblock | grep -e $1)
 #rimuove tutto fino al primo spazio
 LP=${LP/* /}
 #rimuove la virgola alla fine
@@ -81,7 +81,7 @@ echo "$CONF ($DIFF)"
 }
 
 Calcola_Status_Stone(){
-LS=$('stone-cli masternodelist status | grep -e $1')
+LS=$(stone-cli masternodelist status | grep -e $1)
 #rimuove tutto fino al primo spazio
 LS=${LS/* /}
 #rimuove la virgola alla fine
@@ -91,7 +91,7 @@ echo $LS| tr -d '"'
 }
 
 Calcola_LastSeen_Stone(){
-LS=$('stone-cli masternodelist lastseen | grep -e $1')
+LS=$(stone-cli masternodelist lastseen | grep -e $1)
 #rimuove tutto fino al primo spazio
 LS=${LS/* /}
 #rimuove la virgola alla fine
