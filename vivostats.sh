@@ -101,62 +101,21 @@ LS=$(($CU - $LS))
 echo $LS
 }
 
-###########################################################################
-###########################################################################
-LS01_VIVO=$(Calcola_LastSeen_Vivo $MN01_VIVO)
-LS02_VIVO=$(Calcola_LastSeen_Vivo $MN02_VIVO)
-#LS03_VIVO=$(Calcola_LastSeen_Vivo $MN03_VIVO)
-#LS04_VIVO=$(Calcola_LastSeen_Vivo $MN04_VIVO)
-#LS05_VIVO=$(Calcola_LastSeen_Vivo $MN05_VIVO)
-#LS06_VIVO=$(Calcola_LastSeen_Vivo $MN06_VIVO)
-#LS07_VIVO=$(Calcola_LastSeen_Vivo $MN07_VIVO)
-#LS08_VIVO=$(Calcola_LastSeen_Vivo $MN08_VIVO)
-LS09_VIVO=$(Calcola_LastSeen_Vivo $MN09_VIVO)
-#LS10_VIVO=$(Calcola_LastSeen_Vivo $MN10_VIVO)
-#LS11_VIVO=$(Calcola_LastSeen_Vivo $MN11_VIVO)
-
-
-
-ST01_VIVO=$(Calcola_Status_Vivo $MN01_VIVO)
-ST02_VIVO=$(Calcola_Status_Vivo $MN01_VIVO)
-#ST03_VIVO=$(Calcola_Status_Vivo $MN01_VIVO)
-#ST04_VIVO=$(Calcola_Status_Vivo $MN01_VIVO)
-#ST05_VIVO=$(Calcola_Status_Vivo $MN01_VIVO)
-#ST06_VIVO=$(Calcola_Status_Vivo $MN01_VIVO)
-#ST07_VIVO=$(Calcola_Status_Vivo $MN01_VIVO)
-#ST08_VIVO=$(Calcola_Status_Vivo $MN01_VIVO)
-ST09_VIVO=$(Calcola_Status_Vivo $MN01_VIVO)
-#ST10_VIVO=$(Calcola_Status_Vivo $MN01_VIVO)
-#ST11_VIVO=$(Calcola_Status_Vivo $MN01_VIVO)
-
-
-LP01_VIVO=$(Calcola_LP_Vivo $MN01_VIVO)
-LP02_VIVO=$(Calcola_LP_Vivo $MN02_VIVO)
-#LP03_VIVO=$(Calcola_LP_Vivo $MN03_VIVO)
-#LP04_VIVO=$(Calcola_LP_Vivo $MN04_VIVO)
-#LP05_VIVO=$(Calcola_LP_Vivo $MN05_VIVO)
-#LP06_VIVO=$(Calcola_LP_Vivo $MN06_VIVO)
-#LP07_VIVO=$(Calcola_LP_Vivo $MN07_VIVO)
-#LP08_VIVO=$(Calcola_LP_Vivo $MN08_VIVO)
-LP09_VIVO=$(Calcola_LP_Vivo $MN09_VIVO)
-#LP10_VIVO=$(Calcola_LP_Vivo $MN10_VIVO)
-#LP11_VIVO=$(Calcola_LP_Vivo $MN11_VIVO)
-
-
 
 ###########################################################################
 ###########################################################################
 
 echo "Blocchi : $LB_VIVO / $TB_VIVO  Masternodes: $AN"
-echo " "
+echo " 2"
 echo "MN01  Conferme: $(Calcola_LP_Vivo $MN01_VIVO) - $(Calcola_Status_Vivo $MN01_VIVO) - $(Calcola_LastSeen_Vivo $MN01_VIVO)"
-echo "MN02  Conferme: $LP02_VIVO - $ST02_VIVO - $LS02_VIVO"
-#echo "MN03  Conferme: $LP03 - $ST03 - $LS03"
-#echo "MN04  Conferme: $LP04 - $ST04 - $LS04"
-#echo "MN05  Conferme: $LP05 - $ST05 - $LS05"
-#echo "MN06  Conferme: $LP06 - $ST06 - $LS06"
-#echo "MN07  Conferme: $LP07 - $ST07 - $LS07"
-#echo "MN08  Conferme: $LP08 - $ST08 - $LS08"
-echo "MN09  Conferme: $LP09_VIVO - $ST09_VIVO - $LS09_VIVO"
-#echo "MN010 Conferme: $LP10 - $ST10 - $LS10"
-#echo "MN011 Conferme: $LP11 - $ST11 - $LS11"
+echo "MN02  Conferme: $(Calcola_LP_Vivo $MN02_VIVO) - $(Calcola_Status_Vivo $MN02_VIVO) - $(Calcola_LastSeen_Vivo $MN02_VIVO)"
+#echo "MN03  Conferme: $(Calcola_LP_Vivo $MN03_VIVO) - $(Calcola_Status_Vivo $MN03_VIVO) - $(Calcola_LastSeen_Vivo $MN03_VIVO)"
+#echo "MN04  Conferme: $(Calcola_LP_Vivo $MN04_VIVO) - $(Calcola_Status_Vivo $MN04_VIVO) - $(Calcola_LastSeen_Vivo $MN04_VIVO)"
+#echo "MN05  Conferme: $(Calcola_LP_Vivo $MN05_VIVO) - $(Calcola_Status_Vivo $MN05_VIVO) - $(Calcola_LastSeen_Vivo $MN05_VIVO)"
+#echo "MN06  Conferme: $(Calcola_LP_Vivo $MN06_VIVO) - $(Calcola_Status_Vivo $MN06_VIVO) - $(Calcola_LastSeen_Vivo $MN06_VIVO)"
+#echo "MN07  Conferme: $(Calcola_LP_Vivo $MN07_VIVO) - $(Calcola_Status_Vivo $MN07_VIVO) - $(Calcola_LastSeen_Vivo $MN07_VIVO)"
+#echo "MN08  Conferme: $(Calcola_LP_Vivo $MN08_VIVO) - $(Calcola_Status_Vivo $MN08_VIVO) - $(Calcola_LastSeen_Vivo $MN08_VIVO)"
+echo "MN09  Conferme: $(Calcola_LP_Vivo $MN09_VIVO) - $(Calcola_Status_Vivo $MN09_VIVO) - $(Calcola_LastSeen_Vivo $MN09VIVO)"
+#echo "MN10  Conferme: $(Calcola_LP_Vivo $MN10_VIVO) - $(Calcola_Status_Vivo $MN10_VIVO) - $(Calcola_LastSeen_Vivo $MN10_VIVO)"
+#echo "MN11  Conferme: $(Calcola_LP_Vivo $MN11_VIVO) - $(Calcola_Status_Vivo $MN11_VIVO) - $(Calcola_LastSeen_Vivo $MN11_VIVO)"
+
