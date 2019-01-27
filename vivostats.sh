@@ -11,15 +11,9 @@ TB_INN=$(curl -s4 "http://explorer.innovacoin.info/api/getblockcount")
 AN_INN=$(innova-cli masternode count enabled)
 LB_INN=$(innova-cli getblockcount)
 
-TB_DOGEC=$(curl -s4 "https://explorer.dogec.io/api/getblockcount")
-AN_DOGEC=$(dogecash-cli masternode count)
-
-
-LB_DOGEC=$(dogecash-cli getblockcount)
-LB_DOGEC=${LP/*enabled/}
-echo "---$AN_DOGEC---"
-
-exit
+#TB_DOGEC=$(curl -s4 "https://explorer.dogec.io/api/getblockcount")
+#AN_DOGEC=$(dogecash-cli masternode count)
+#LB_DOGEC=$(dogecash-cli getblockcount)
 
 #definisco masternode vivo
 MN01_VIVO=b96cc9d0e44cf4b6b7b2f80f8f42446af13a427916b881964c8ed667d9bd4937
@@ -256,15 +250,15 @@ echo "MN08  Conferme: $(Calcola_LP_Inn $MN08_INN) - $(Calcola_Status_Inn $MN08_I
 echo "MN09  Conferme: $(Calcola_LP_Inn $MN09_INN) - $(Calcola_Status_Inn $MN09_INN) - $(Calcola_LastSeen_Inn $MN09_INN)"
 echo "MN10  Conferme: $(Calcola_LP_Inn $MN10_INN) - $(Calcola_Status_Inn $MN10_INN) - $(Calcola_LastSeen_Inn $MN10_INN)"
 echo "MN11  Conferme: $(Calcola_LP_Inn $MN11_INN) - $(Calcola_Status_Inn $MN11_INN) - $(Calcola_LastSeen_Inn $MN11_INN)"
-echo " "
-echo " "
-echo "Dogec status"
-echo "Blocchi : $LB_DOGEC / $TB_DOGEC  Masternodes: $AN_DOGEC"
-echo " "
-echo "MN01  Conferme: $(Calcola_LP_Dogec $MN01_DOGEC) - $(Calcola_Status_Dogec $MN01_DOGEC) - $(Calcola_LastSeen_Dogec $MN01_DOGEC)"
-echo "MN02  Conferme: $(Calcola_LP_Dogec $MN02_DOGEC) - $(Calcola_Status_Dogec $MN02_DOGEC) - $(Calcola_LastSeen_Dogec $MN02_DOGEC)"
-echo "MN03  Conferme: $(Calcola_LP_Dogec $MN03_DOGEC) - $(Calcola_Status_Dogec $MN03_DOGEC) - $(Calcola_LastSeen_Dogec $MN03_DOGEC)"
-echo "MN04  Conferme: $(Calcola_LP_Dogec $MN04_DOGEC) - $(Calcola_Status_Dogec $MN04_DOGEC) - $(Calcola_LastSeen_Dogec $MN04_DOGEC)"
+#echo " "
+#echo " "
+#echo "Dogec status"
+#echo "Blocchi : $LB_DOGEC / $TB_DOGEC  Masternodes: $AN_DOGEC"
+#echo " "
+#echo "MN01  Conferme: $(Calcola_LP_Dogec $MN01_DOGEC) - $(Calcola_Status_Dogec $MN01_DOGEC) - $(Calcola_LastSeen_Dogec $MN01_DOGEC)"
+#echo "MN02  Conferme: $(Calcola_LP_Dogec $MN02_DOGEC) - $(Calcola_Status_Dogec $MN02_DOGEC) - $(Calcola_LastSeen_Dogec $MN02_DOGEC)"
+#echo "MN03  Conferme: $(Calcola_LP_Dogec $MN03_DOGEC) - $(Calcola_Status_Dogec $MN03_DOGEC) - $(Calcola_LastSeen_Dogec $MN03_DOGEC)"
+#echo "MN04  Conferme: $(Calcola_LP_Dogec $MN04_DOGEC) - $(Calcola_Status_Dogec $MN04_DOGEC) - $(Calcola_LastSeen_Dogec $MN04_DOGEC)"
 #echo "MN05  Conferme: $(Calcola_LP_Dogec $MN05_DOGEC) - $(Calcola_Status_Dogec $MN05_DOGEC) - $(Calcola_LastSeen_Dogec $MN05_DOGEC)"
 #echo "MN06  Conferme: $(Calcola_LP_Dogec $MN06_DOGEC) - $(Calcola_Status_Dogec $MN06_DOGEC) - $(Calcola_LastSeen_Dogec $MN06_DOGEC)"
 #echo "MN07  Conferme: $(Calcola_LP_Dogec $MN07_DOGEC) - $(Calcola_Status_Dogec $MN07_DOGEC) - $(Calcola_LastSeen_Dogec $MN07_DOGEC)"
