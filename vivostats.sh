@@ -12,9 +12,14 @@ AN_INN=$(innova-cli masternode count enabled)
 LB_INN=$(innova-cli getblockcount)
 
 TB_DOGEC=$(curl -s4 "https://explorer.dogec.io/api/getblockcount")
-AN_DOGEC=$(dogecash-cli masternode count enabled)
+AN_DOGEC=$(dogecash-cli masternode count)
+
+
 LB_DOGEC=$(dogecash-cli getblockcount)
 
+echo "---$AN_DOGEC---"
+
+exit
 
 #definisco masternode vivo
 MN01_VIVO=b96cc9d0e44cf4b6b7b2f80f8f42446af13a427916b881964c8ed667d9bd4937
