@@ -16,7 +16,7 @@ AN_DOGEC=$(dogecash-cli masternode count)
 
 
 LB_DOGEC=$(dogecash-cli getblockcount)
-
+LB_DOGEC=${LP/*enabled/}
 echo "---$AN_DOGEC---"
 
 exit
