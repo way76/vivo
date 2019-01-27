@@ -143,7 +143,7 @@ echo $LS| tr -d '"'
 }
 
 Calcola_LastSeen_Inn(){
-LS=$(inn-cli masternodelist lastseen | grep -e $1)
+LS=$(innova-cli masternodelist lastseen | grep -e $1)
 #rimuove tutto fino al primo spazio
 LS=${LS/* /}
 #rimuove la virgola alla fine
