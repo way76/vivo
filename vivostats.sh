@@ -148,8 +148,8 @@ LP09_VIVO=$(Calcola_LP_Vivo $MN09_VIVO)
 ###########################################################################
 
 echo "Blocchi : $LB_VIVO / $TB_VIVO  Masternodes: $AN"
-echo " 1"
-echo "MN01  Conferme: $LP01_VIVO - $ST01_VIVO - $LS01_VIVO"
+echo " "
+echo "MN01  Conferme: $(Calcola_LP_Vivo $MN01_VIVO) - $(Calcola_Status_Vivo $MN01_VIVO) - $(Calcola_LastSeen_Vivo $MN01_VIVO)"
 echo "MN02  Conferme: $LP02_VIVO - $ST02_VIVO - $LS02_VIVO"
 #echo "MN03  Conferme: $LP03 - $ST03 - $LS03"
 #echo "MN04  Conferme: $LP04 - $ST04 - $LS04"
