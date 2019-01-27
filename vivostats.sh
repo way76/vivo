@@ -104,9 +104,9 @@ echo $LS
 
 ###########################################################################
 ###########################################################################
-
-echo "Blocchi : $LB_VIVO / $TB_VIVO  Masternodes: $AN"
-echo " 2"
+echo "VivoCoin status"
+echo "Blocchi : $LB_VIVO / $TB_VIVO  Masternodes: $AN_VIVO"
+echo " "
 echo "MN01  Conferme: $(Calcola_LP_Vivo $MN01_VIVO) - $(Calcola_Status_Vivo $MN01_VIVO) - $(Calcola_LastSeen_Vivo $MN01_VIVO)"
 echo "MN02  Conferme: $(Calcola_LP_Vivo $MN02_VIVO) - $(Calcola_Status_Vivo $MN02_VIVO) - $(Calcola_LastSeen_Vivo $MN02_VIVO)"
 #echo "MN03  Conferme: $(Calcola_LP_Vivo $MN03_VIVO) - $(Calcola_Status_Vivo $MN03_VIVO) - $(Calcola_LastSeen_Vivo $MN03_VIVO)"
@@ -115,7 +115,25 @@ echo "MN02  Conferme: $(Calcola_LP_Vivo $MN02_VIVO) - $(Calcola_Status_Vivo $MN0
 #echo "MN06  Conferme: $(Calcola_LP_Vivo $MN06_VIVO) - $(Calcola_Status_Vivo $MN06_VIVO) - $(Calcola_LastSeen_Vivo $MN06_VIVO)"
 #echo "MN07  Conferme: $(Calcola_LP_Vivo $MN07_VIVO) - $(Calcola_Status_Vivo $MN07_VIVO) - $(Calcola_LastSeen_Vivo $MN07_VIVO)"
 #echo "MN08  Conferme: $(Calcola_LP_Vivo $MN08_VIVO) - $(Calcola_Status_Vivo $MN08_VIVO) - $(Calcola_LastSeen_Vivo $MN08_VIVO)"
-echo "MN09  Conferme: $(Calcola_LP_Vivo $MN09_VIVO) - $(Calcola_Status_Vivo $MN09_VIVO) - $(Calcola_LastSeen_Vivo $MN09VIVO)"
+echo "MN09  Conferme: $(Calcola_LP_Vivo $MN09_VIVO) - $(Calcola_Status_Vivo $MN09_VIVO) - $(Calcola_LastSeen_Vivo $MN09_VIVO)"
 #echo "MN10  Conferme: $(Calcola_LP_Vivo $MN10_VIVO) - $(Calcola_Status_Vivo $MN10_VIVO) - $(Calcola_LastSeen_Vivo $MN10_VIVO)"
 #echo "MN11  Conferme: $(Calcola_LP_Vivo $MN11_VIVO) - $(Calcola_Status_Vivo $MN11_VIVO) - $(Calcola_LastSeen_Vivo $MN11_VIVO)"
+echo " "
+echo " "
+echo " "
+echo "Stone status"
+echo "Blocchi : $LB_STONE / $TB_STONE  Masternodes: $AN_STONE"
+echo " "
+echo "MN01  Conferme: $(Calcola_LP_Vivo $MN01_STONE) - $(Calcola_Status_Vivo $MN01_STONE) - $(Calcola_LastSeen_Vivo $MN01_STONE)"
+echo "MN02  Conferme: $(Calcola_LP_Vivo $MN02_STONE) - $(Calcola_Status_Vivo $MN02_STONE) - $(Calcola_LastSeen_Vivo $MN02_STONE)"
+echo "MN03  Conferme: $(Calcola_LP_Vivo $MN03_STONE) - $(Calcola_Status_Vivo $MN03_STONE) - $(Calcola_LastSeen_Vivo $MN03_STONE)"
+echo "MN04  Conferme: $(Calcola_LP_Vivo $MN04_STONE) - $(Calcola_Status_Vivo $MN04_STONE) - $(Calcola_LastSeen_Vivo $MN04_STONE)"
+echo "MN05  Conferme: $(Calcola_LP_Vivo $MN05_STONE) - $(Calcola_Status_Vivo $MN05_STONE) - $(Calcola_LastSeen_Vivo $MN05_STONE)"
+echo "MN06  Conferme: $(Calcola_LP_Vivo $MN06_STONE) - $(Calcola_Status_Vivo $MN06_STONE) - $(Calcola_LastSeen_Vivo $MN06_STONE)"
+echo "MN07  Conferme: $(Calcola_LP_Vivo $MN07_STONE) - $(Calcola_Status_Vivo $MN07_STONE) - $(Calcola_LastSeen_Vivo $MN07_STONE)"
+echo "MN08  Conferme: $(Calcola_LP_Vivo $MN08_STONE) - $(Calcola_Status_Vivo $MN08_STONE) - $(Calcola_LastSeen_Vivo $MN08_STONE)"
+echo "MN09  Conferme: $(Calcola_LP_Vivo $MN09_STONE) - $(Calcola_Status_Vivo $MN09_STONE) - $(Calcola_LastSeen_Vivo $MN09_STONE)"
+echo "MN10  Conferme: $(Calcola_LP_Vivo $MN10_STONE) - $(Calcola_Status_Vivo $MN10_STONE) - $(Calcola_LastSeen_Vivo $MN10_STONE)"
+echo "MN11  Conferme: $(Calcola_LP_Vivo $MN11_STONE) - $(Calcola_Status_Vivo $MN11_STONE) - $(Calcola_LastSeen_Vivo $MN11_STONE)"
+
 
