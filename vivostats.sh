@@ -173,7 +173,7 @@ echo $LS
 ###########################################################################
 ###########################################################################
 Calcola_LP_Dogec(){
-LP=$(dogecash-cli masternodelist lastpaidblock | grep -e $1)
+LP=$(dogecash-cli listmasternode lastpaidblock | grep -e $1)
 #rimuove tutto fino al primo spazio
 LP=${LP/* /}
 #rimuove la virgola alla fine
@@ -184,7 +184,7 @@ echo "$CONF ($DIFF)"
 }
 
 Calcola_Status_Dogec(){
-LS=$(dogecash-cli masternodelist status | grep -e $1)
+LS=$(dogecash-cli listmasternode status | grep -e $1)
 #rimuove tutto fino al primo spazio
 LS=${LS/* /}
 #rimuove la virgola alla fine
@@ -194,7 +194,7 @@ echo $LS| tr -d '"'
 }
 
 Calcola_LastSeen_Dogec(){
-LS=$(dogecash-cli masternodelist lastseen | grep -e $1)
+LS=$(dogecash-cli listmasternode lastseen | grep -e $1)
 #rimuove tutto fino al primo spazio
 LS=${LS/* /}
 #rimuove la virgola alla fine
