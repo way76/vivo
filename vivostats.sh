@@ -4,8 +4,8 @@ AN_VIVO=$(su mnv -c  "vivo-cli masternode count enabled")
 LB_VIVO=$(su mnv -c  "vivo-cli getblockcount")
 
 TB_STONE=$(curl -s4 "http://explorer.stonecoin.rocks/api/getblockcount")
-AN_STONE=$(su mnv -c  "vivo-cli masternode count enabled")
-LB_STONE=$(su mnv -c  "vivo-cli getblockcount")
+AN_STONE=$(su mnv -c  "stone-cli masternode count enabled")
+LB_STONE=$(su mnv -c  "stone-cli getblockcount")
 
 #definisco masternode vivo
 MN01_VIVO=b96cc9d0e44cf4b6b7b2f80f8f42446af13a427916b881964c8ed667d9bd4937
