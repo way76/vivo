@@ -1,4 +1,32 @@
 #!/bin/bash
+
+###########################################################################
+###########################################################################
+Calcola_Attivi_Snd()
+{
+        AN=$(snodecoin-cli masternode count)
+        set -- $AN
+        AN=$9
+        AN=${AN//[,]/}
+        echo "$AN"
+}
+
+
+Calcola_Attivi_Dogec()
+{
+        AN=$(dogecash-cli masternode count)
+        a=( $AN )
+        AN=${a[12]}
+        AN=${AN//[,]/}
+        echo "$AN"
+}
+
+
+
+
+
+
+
 TB_VIVO=$(curl -s4 "http://149.28.83.1:3001/api/getblockcount")
 AN_VIVO=$(su mnv -c  "vivo-cli masternode count enabled")
 LB_VIVO=$(su mnv -c  "vivo-cli getblockcount")
@@ -12,12 +40,12 @@ AN_INN=$(innova-cli masternode count enabled)
 LB_INN=$(innova-cli getblockcount)
 
 TB_SND=$(curl -s4 "https://explorer.snode.co/api/getblockcount")
-AN_SND= $(Calcola_Attivi_Snd) 
+AN_SND=$(Calcola_Attivi_Snd) 
 LB_SND=$(snodecoin-cli getblockcount)
 
-#TB_DOGEC=$(curl -s4 "https://explorer.dogec.io/api/getblockcount")
-#AN_DOGEC=$(dogecash-cli masternode count)
-#LB_DOGEC=$(dogecash-cli getblockcount)
+TB_DOGEC=$(curl -s4 "https://explorer.dogec.io/api/getblockcount")
+AN_DOGEC=$(Calcola_Attivi_Dogec)
+LB_DOGEC=$(dogecash-cli getblockcount)
 
 #definisco masternode vivo
 MN01_VIVO=b96cc9d0e44cf4b6b7b2f80f8f42446af13a427916b881964c8ed667d9bd4937
@@ -27,7 +55,7 @@ MN04_VIVO=240e265e6c604f6ab118ae5b6dd4df8ee9f3507e249531dc92e94444cf6667fe
 MN05_VIVO=e6261cee3cd8714874648cde55dd2a13c5fda67647c34323649e5f7d8c9019a7
 MN06_VIVO=349cf45e78bd2ce109d97318ac5e840e79e5dc2db5851e43c341c4a969cf95bb
 MN07_VIVO=22737c5f3a1a606869902e4e2572ec68e62b61f2566c7ada07469e644bdef17f
-MN08_VIVO=3182595924d3fa8be0de7fb3b7675a5b0308c0f252a6d985d60a190d63c22cf5
+MN08_VIVO=0377f205fbcb4014f9c512e7f7314d03719464a3ab28d771d1a249b605559e84
 MN09_VIVO=1681556050eb477e7fd50bffe3c4af87427cde7d37fc72fdd9f1dc40c2b9fa8b
 MN10_VIVO=d99cb3dd22093f50ea4de2ab3f29dde095ebea3f4d029e671a95f4e68ade3450
 MN11_VIVO=3006a6bcef5589c2ed0568363170f95eb5282fb9630c510182916ed14b762129
@@ -59,11 +87,11 @@ MN10_INN=0527c44e1a557b6a6be8791bb9db1eda336abc66e533cfe8dbfbd0e66cd0f93c
 MN11_INN=ee251a9735839ae75fead2aebeed4e967a819876dcccf31b0ea50a8bca63f718
 
 #definisco masternode Dogec
-MN01_DOGEC=3c353ac9060c9ec9ca6fd08a443efc73b87647212eddf5fb3858f04472793e0b
-MN02_DOGEC=33fcf884b5dc96ec045ff96a719d598758c60d328bfd9c933dacab680b9d99f0
-MN03_DOGEC=108a715c3c2cb9c565f8a7031497eecf91bc866455adc15ca7345e5bb494cf18
-MN04_DOGEC=3a7b6dae8bc358ebbde63812ba38de52d25009555242acef2b0db5ebd9eb7f77
-MN05_DOGEC=3a7b6dae8bc358ebbde63812ba38de52d25009555242acef2b0db5ebd9eb7f77
+MN01_DOGEC=DHGZLafWBHscpTseLVBm58UDFcAwYmf3yr
+MN02_DOGEC=DRMyXZPj1DjvPDwQ8g7eqDPb33N8fcfgvA
+MN03_DOGEC=DHM9xTzXMnDCeiGpmMmqrsNPMa1sJmvfaA
+MN04_DOGEC=DDiScS5Am1XapDiVCN33CPyj1Z51Ynyg6Z
+MN05_DOGEC=DB3a7q2Z6srh8zSkmeA1an9zfP3rLypJ5p
 MN06_DOGEC=77ba2f27b86303649641a544de2f3318a32fb73d545bac9a4120422c5339225a
 MN07_DOGEC=353e6be4165292ef8bbb391869c657d199e609c06b3cde9c1738e9c50a4be20b
 MN08_DOGEC=59a8fcf54247b56b169a4eb1c67b0b4bbb3d718ac720f932e9648ad1c8bc8f39
@@ -73,26 +101,16 @@ MN11_DOGEC=ee251a9735839ae75fead2aebeed4e967a819876dcccf31b0ea50a8bca63f718
 
 #definisco masternode SND
 MN01_SND=3c353ac9060c9ec9ca6fd08a443efc73b87647212eddf5fb3858f04472793e0b
-MN02_SND=7RuCj187Cc6jkND92xWhjbeqoovs7mL5c38U834WSQrz1tAPf2g
+MN02_SND=SXqBQCNPDkHujpLFoKLYfX1JQoYBc23e5p
 MN03_SND=108a715c3c2cb9c565f8a7031497eecf91bc866455adc15ca7345e5bb494cf18
 MN04_SND=3a7b6dae8bc358ebbde63812ba38de52d25009555242acef2b0db5ebd9eb7f77
 MN05_SND=3a7b6dae8bc358ebbde63812ba38de52d25009555242acef2b0db5ebd9eb7f77
 MN06_SND=77ba2f27b86303649641a544de2f3318a32fb73d545bac9a4120422c5339225a
 MN07_SND=353e6be4165292ef8bbb391869c657d199e609c06b3cde9c1738e9c50a4be20b
-MN08_SND=59a8fcf54247b56b169a4eb1c67b0b4bbb3d718ac720f932e9648ad1c8bc8f39
-MN09_SND=7RqX1EVEe8t2gzRT78XuupQmMcrqwYV7tQUeHGWtGJTUVdvcse4
-MN10_SND=7RzRVTDY6gQ8PXLpqSm43sd7VBbJWZQK2QXa2SVawEmPKD9BNTq
-MN11_SND=7R5jFDX3fACsDAbaZbattBMXPdw7P2be5ba5bkHtt5B1JW2JyNe
-
-###########################################################################
-###########################################################################
-Calcola_Attivi_Snd()
-{
-	AN=$(snodecoin-cli masternode count)
-	echo "$AN"
-	exit;
-}
-
+MN08_SND=STiusKMLjjXE43oDvLfNAnfgLz8WBer2sc
+MN09_SND=SUkDM3FV9YiYKPmP8pNjvZni9HjfMjdJ92
+MN10_SND=SgQLcXHh7gQeJ1PxgxRUHCnmqZr7tAdKYy
+MN11_SND=SX1xZQLpDwPPd7mSwV7MngSLNXZUuTy1MG
 
 
 
@@ -199,69 +217,165 @@ echo $LS
 ###########################################################################
 ###########################################################################
 Calcola_LP_Dogec(){
-LP=$(dogecash-cli listmasternode lastpaidblock | grep -e $1)
-#rimuove tutto fino al primo spazio
-LP=${LP/* /}
-#rimuove la virgola alla fine
-LP=${LP//[,]/}	
-CONF=$(($TB_INN - $LP))
-DIFF=$(($AN_INN - $CONF))
+LP=$(dogecash-cli listmasternodes  | grep $1 -A 5  -B 6)
+#{
+#        "rank" : 304,
+#        "network" : "ipv4",
+#        "txhash" : "3c353ac9060c9ec9ca6fd08a443efc73b87647212eddf5fb3858f04472793e0b",
+#        "outidx" : 1,
+#        "status" : "ENABLED",
+#        "addr" : "DHGZLafWBHscpTseLVBm58UDFcAwYmf3yr",
+#        "ip:port" : "80.211.213.40:6740",
+#        "version" : 72018,
+#        "lastseen" : 1549109015,
+#        "activetime" : 5551247,
+#        "lastpaid" : 1549098756
+#
+#divido la risposta in array e conservo 23esimo elemento
+#echo "Lp ricevuto :$LP:"
+a=( $LP )
+LP=${a[33]}
+CONF=$(($TB_DOGEC - $LP))
+DIFF=$(($AN_DOGEC - $CONF))
 echo "$CONF ($DIFF)"
 }
 
 Calcola_Status_Dogec(){
-LS=$(dogecash-cli listmasternode status | grep -e $1)
-#rimuove tutto fino al primo spazio
-LS=${LS/* /}
-#rimuove la virgola alla fine
-LS=${LS//[,]/}	
-#rimuovo virgolette dallo stato
+LS=$(dogecash-cli listmasternodes  | grep $1 -A 5  -B 6)
+#{
+#        "rank" : 304,
+#        "network" : "ipv4",
+#        "txhash" : "3c353ac9060c9ec9ca6fd08a443efc73b87647212eddf5fb3858f04472793e0b",
+#        "outidx" : 1,
+#        "status" : "ENABLED",
+#        "addr" : "DHGZLafWBHscpTseLVBm58UDFcAwYmf3yr",
+#        "ip:port" : "80.211.213.40:6740",
+#        "version" : 72018,
+#        "lastseen" : 1549109015,
+#        "activetime" : 5551247,
+#        "lastpaid" : 1549098756
+#
+#divido la risposta in array e conservo 23esimo elemento
+#echo "Lp ricevuto :$LP:"
+a=( $LS )
+LS=${a[15]}
+LS=${LS//[,]/}
 echo $LS| tr -d '"'
+#echo "$LS"
 }
 
+
 Calcola_LastSeen_Dogec(){
-LS=$(dogecash-cli listmasternode lastseen | grep -e $1)
-#rimuove tutto fino al primo spazio
-LS=${LS/* /}
-#rimuove la virgola alla fine
-LS=${LS//[,]/}	
+LS=$(dogecash-cli listmasternodes  | grep $1 -A 5  -B 6)
+#ottengo una risposta tipo
+# {
+#    "rank": 136,
+#    "network": "ipv4",
+#    "txhash": "b0ca9bc6b65df74d1a750d2208fca7a1f26b33fa0da21d6eb355e551a9197c1c",
+#    "outidx": 0,
+#    "status": "ENABLED",
+#    "addr": "SX1xZQLpDwPPd7mSwV7MngSLNXZUuTy1MG",
+#    "version": 70921,
+#    "lastseen": 1549097241,
+#    "activetime": 59794,
+#    "lastpaid": 0
+#  },
+#
+#divido la risposta in array e conservo 17esimo elemento
+#echo "Ls ricevuto :$LS:"
+a=( $LS )
+LS=${a[27]}
+LS=${LS//[,]/}
 CU=$(date +%s)
-LS=$(($CU - $LS))
-echo $LS
+LS1=$(($CU - $LS))
+#echo "CU:$CU ->LS:$LS ->LS1:$LS1"
+echo "$LS1"
 }
+
+
+
 ###########################################################################
 ###########################################################################
-Calcola_LP_Snd(){
-LP=$(snodecoin-cli listmasternode lastpaidblock | grep -e $1)
-#rimuove tutto fino al primo spazio
-LP=${LP/* /}
-#rimuove la virgola alla fine
-LP=${LP//[,]/}	
-CONF=$(($TB_INN - $LP))
-DIFF=$(($AN_INN - $CONF))
+Calcola_LP_Snd()
+{
+LP=$(snodecoin-cli masternode list | grep $1 -A 5  -B 6)
+#ottengo una risposta tipo
+# {
+#    "rank": 136,
+#    "network": "ipv4",
+#    "txhash": "b0ca9bc6b65df74d1a750d2208fca7a1f26b33fa0da21d6eb355e551a9197c1c",
+#    "outidx": 0,
+#    "status": "ENABLED",
+#    "addr": "SX1xZQLpDwPPd7mSwV7MngSLNXZUuTy1MG",
+#    "version": 70921,
+#    "lastseen": 1549097241,
+#    "activetime": 59794,
+#    "lastpaid": 0
+#  },
+#
+#divido la risposta in array e conservo 21esimo elemento
+#echo "Lp ricevuto :$LP:"
+a=( $LP )
+LP=${a[20]}
+#echo ${a[1]}
+#echo ${a[2]}
+CONF=$(($TB_SND - $LP))
+DIFF=$(($AN_SND - $CONF))
 echo "$CONF ($DIFF)"
 }
 
 Calcola_Status_Snd(){
-LS=$(snodecoin-cli listmasternode status | grep -e $1)
-#rimuove tutto fino al primo spazio
-LS=${LS/* /}
-#rimuove la virgola alla fine
-LS=${LS//[,]/}	
-#rimuovo virgolette dallo stato
+LS=$(snodecoin-cli masternode list | grep $1 -A 5  -B 6)
+#ottengo una risposta tipo
+# {
+#    "rank": 136,
+#    "network": "ipv4",
+#    "txhash": "b0ca9bc6b65df74d1a750d2208fca7a1f26b33fa0da21d6eb355e551a9197c1c",
+#    "outidx": 0,
+#    "status": "ENABLED",
+#    "addr": "SX1xZQLpDwPPd7mSwV7MngSLNXZUuTy1MG",
+#    "version": 70921,
+#    "lastseen": 1549097241,
+#    "activetime": 59794,
+#    "lastpaid": 0
+#  },
+#
+#divido la risposta in array e conservo 11esimo elemento
+a=( $LS )
+LS=${a[10]}
+LS=${LS//[,]/}
 echo $LS| tr -d '"'
+#echo "$LS"
 }
 
 Calcola_LastSeen_Snd(){
-LS=$(snodecoin-cli listmasternode lastseen | grep -e $1)
-#rimuove tutto fino al primo spazio
-LS=${LS/* /}
-#rimuove la virgola alla fine
-LS=${LS//[,]/}	
+
+LS=$(snodecoin-cli masternode list | grep $1 -A 5  -B 6)
+#ottengo una risposta tipo
+# {
+#    "rank": 136,
+#    "network": "ipv4",
+#    "txhash": "b0ca9bc6b65df74d1a750d2208fca7a1f26b33fa0da21d6eb355e551a9197c1c",
+#    "outidx": 0,
+#    "status": "ENABLED",
+#    "addr": "SX1xZQLpDwPPd7mSwV7MngSLNXZUuTy1MG",
+#    "version": 70921,
+#    "lastseen": 1549097241,
+#    "activetime": 59794,
+#    "lastpaid": 0
+#  },
+#
+#divido la risposta in array e conservo 16esimo elemento
+#echo "Ls ricevuto :$LS:"
+a=( $LS )
+LS=${a[16]}
+LS=${LS//[,]/}
 CU=$(date +%s)
-LS=$(($CU - $LS))
-echo $LS
+LS1=$(($CU - $LS))
+#echo "CU:$CU ->LS:$LS ->LS1:$LS1"
+echo "$LS1"
 }
+
 
 ###########################################################################
 ###########################################################################
@@ -280,7 +394,6 @@ echo "MN09  Conferme: $(Calcola_LP_Vivo $MN09_VIVO) - $(Calcola_Status_Vivo $MN0
 #echo "MN10  Conferme: $(Calcola_LP_Vivo $MN10_VIVO) - $(Calcola_Status_Vivo $MN10_VIVO) - $(Calcola_LastSeen_Vivo $MN10_VIVO)"
 #echo "MN11  Conferme: $(Calcola_LP_Vivo $MN11_VIVO) - $(Calcola_Status_Vivo $MN11_VIVO) - $(Calcola_LastSeen_Vivo $MN11_VIVO)"
 echo " "
-echo " "
 echo "Stone status"
 echo "Blocchi : $LB_STONE / $TB_STONE  Masternodes: $AN_STONE"
 echo " "
@@ -295,7 +408,6 @@ echo "MN08  Conferme: $(Calcola_LP_Stone $MN08_STONE) - $(Calcola_Status_Stone $
 echo "MN09  Conferme: $(Calcola_LP_Stone $MN09_STONE) - $(Calcola_Status_Stone $MN09_STONE) - $(Calcola_LastSeen_Stone $MN09_STONE)"
 echo "MN10  Conferme: $(Calcola_LP_Stone $MN10_STONE) - $(Calcola_Status_Stone $MN10_STONE) - $(Calcola_LastSeen_Stone $MN10_STONE)"
 echo "MN11  Conferme: $(Calcola_LP_Stone $MN11_STONE) - $(Calcola_Status_Stone $MN11_STONE) - $(Calcola_LastSeen_Stone $MN11_STONE)"
-echo " "
 echo " "
 echo "Innova status"
 echo "Blocchi : $LB_INN / $TB_INN  Masternodes: $AN_INN"
@@ -312,22 +424,20 @@ echo "MN09  Conferme: $(Calcola_LP_Inn $MN09_INN) - $(Calcola_Status_Inn $MN09_I
 echo "MN10  Conferme: $(Calcola_LP_Inn $MN10_INN) - $(Calcola_Status_Inn $MN10_INN) - $(Calcola_LastSeen_Inn $MN10_INN)"
 echo "MN11  Conferme: $(Calcola_LP_Inn $MN11_INN) - $(Calcola_Status_Inn $MN11_INN) - $(Calcola_LastSeen_Inn $MN11_INN)"
 #echo " "
-#echo " "
 #echo "Dogec status"
 #echo "Blocchi : $LB_DOGEC / $TB_DOGEC  Masternodes: $AN_DOGEC"
 #echo " "
-#echo "MN01  Conferme: $(Calcola_LP_Dogec $MN01_DOGEC) - $(Calcola_Status_Dogec $MN01_DOGEC) - $(Calcola_LastSeen_Dogec $MN01_DOGEC)"
-#echo "MN02  Conferme: $(Calcola_LP_Dogec $MN02_DOGEC) - $(Calcola_Status_Dogec $MN02_DOGEC) - $(Calcola_LastSeen_Dogec $MN02_DOGEC)"
-#echo "MN03  Conferme: $(Calcola_LP_Dogec $MN03_DOGEC) - $(Calcola_Status_Dogec $MN03_DOGEC) - $(Calcola_LastSeen_Dogec $MN03_DOGEC)"
-#echo "MN04  Conferme: $(Calcola_LP_Dogec $MN04_DOGEC) - $(Calcola_Status_Dogec $MN04_DOGEC) - $(Calcola_LastSeen_Dogec $MN04_DOGEC)"
-#echo "MN05  Conferme: $(Calcola_LP_Dogec $MN05_DOGEC) - $(Calcola_Status_Dogec $MN05_DOGEC) - $(Calcola_LastSeen_Dogec $MN05_DOGEC)"
+echo "MN01  Conferme: $(Calcola_LP_Dogec $MN01_DOGEC) - $(Calcola_Status_Dogec $MN01_DOGEC) - $(Calcola_LastSeen_Dogec $MN01_DOGEC)"
+echo "MN02  Conferme: $(Calcola_LP_Dogec $MN02_DOGEC) - $(Calcola_Status_Dogec $MN02_DOGEC) - $(Calcola_LastSeen_Dogec $MN02_DOGEC)"
+echo "MN03  Conferme: $(Calcola_LP_Dogec $MN03_DOGEC) - $(Calcola_Status_Dogec $MN03_DOGEC) - $(Calcola_LastSeen_Dogec $MN03_DOGEC)"
+echo "MN04  Conferme: $(Calcola_LP_Dogec $MN04_DOGEC) - $(Calcola_Status_Dogec $MN04_DOGEC) - $(Calcola_LastSeen_Dogec $MN04_DOGEC)"
+echo "MN05  Conferme: $(Calcola_LP_Dogec $MN05_DOGEC) - $(Calcola_Status_Dogec $MN05_DOGEC) - $(Calcola_LastSeen_Dogec $MN05_DOGEC)"
 #echo "MN06  Conferme: $(Calcola_LP_Dogec $MN06_DOGEC) - $(Calcola_Status_Dogec $MN06_DOGEC) - $(Calcola_LastSeen_Dogec $MN06_DOGEC)"
 #echo "MN07  Conferme: $(Calcola_LP_Dogec $MN07_DOGEC) - $(Calcola_Status_Dogec $MN07_DOGEC) - $(Calcola_LastSeen_Dogec $MN07_DOGEC)"
 #echo "MN08  Conferme: $(Calcola_LP_Dogec $MN08_DOGEC) - $(Calcola_Status_Dogec $MN08_DOGEC) - $(Calcola_LastSeen_Dogec $MN08_DOGEC)"
 #echo "MN09  Conferme: $(Calcola_LP_Dogec $MN09_DOGEC) - $(Calcola_Status_Dogec $MN09_DOGEC) - $(Calcola_LastSeen_Dogec $MN09_DOGEC)"
 #echo "MN10  Conferme: $(Calcola_LP_Dogec $MN10_DOGEC) - $(Calcola_Status_Dogec $MN10_DOGEC) - $(Calcola_LastSeen_Dogec $MN10_DOGEC)"
 #echo "MN11  Conferme: $(Calcola_LP_Dogec $MN11_DOGEC) - $(Calcola_Status_Dogec $MN11_DOGEC) - $(Calcola_LastSeen_Dogec $MN11_DOGEC)"
-echo " "
 echo " "
 echo "Snd status"
 echo "Blocchi : $LB_SND / $TB_SND  Masternodes: $AN_SND"
@@ -339,7 +449,7 @@ echo "MN02  Conferme: $(Calcola_LP_Snd $MN02_SND) - $(Calcola_Status_Snd $MN02_S
 #echo "MN05  Conferme: $(Calcola_LP_Snd $MN05_SND) - $(Calcola_Status_Snd $MN05_SND) - $(Calcola_LastSeen_Snd $MN05_SND)"
 #echo "MN06  Conferme: $(Calcola_LP_Snd $MN06_SND) - $(Calcola_Status_Snd $MN06_SND) - $(Calcola_LastSeen_Snd $MN06_SND)"
 #echo "MN07  Conferme: $(Calcola_LP_Snd $MN07_SND) - $(Calcola_Status_Snd $MN07_SND) - $(Calcola_LastSeen_Snd $MN07_SND)"
-#echo "MN08  Conferme: $(Calcola_LP_Snd $MN08_SND) - $(Calcola_Status_Snd $MN08_SND) - $(Calcola_LastSeen_Snd $MN08_SND)"
+echo "MN08  Conferme: $(Calcola_LP_Snd $MN08_SND) - $(Calcola_Status_Snd $MN08_SND) - $(Calcola_LastSeen_Snd $MN08_SND)"
 echo "MN09  Conferme: $(Calcola_LP_Snd $MN09_SND) - $(Calcola_Status_Snd $MN09_SND) - $(Calcola_LastSeen_Snd $MN09_SND)"
 echo "MN10  Conferme: $(Calcola_LP_Snd $MN10_SND) - $(Calcola_Status_Snd $MN10_SND) - $(Calcola_LastSeen_Snd $MN10_SND)"
 echo "MN11  Conferme: $(Calcola_LP_Snd $MN11_SND) - $(Calcola_Status_Snd $MN11_SND) - $(Calcola_LastSeen_Snd $MN11_SND)"
