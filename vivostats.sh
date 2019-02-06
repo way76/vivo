@@ -53,7 +53,7 @@ MN02_VIVO=57f88b7a779679d699c60407172faeb1a1d0fc72661236e71b94be1cc012cfbb
 MN03_VIVO=a5cd3329eb2885266aa9b737fec66fdd8ec696a059fa4d5c88313e74bae1cc14
 MN04_VIVO=240e265e6c604f6ab118ae5b6dd4df8ee9f3507e249531dc92e94444cf6667fe
 MN05_VIVO=e6261cee3cd8714874648cde55dd2a13c5fda67647c34323649e5f7d8c9019a7
-MN06_VIVO=349cf45e78bd2ce109d97318ac5e840e79e5dc2db5851e43c341c4a969cf95bb
+MN06_VIVO=943c067c2dd8037199edb4aa98fd0d53ed0657e14f3b97cddf9d94613278b6de
 MN07_VIVO=22737c5f3a1a606869902e4e2572ec68e62b61f2566c7ada07469e644bdef17f
 MN08_VIVO=0377f205fbcb4014f9c512e7f7314d03719464a3ab28d771d1a249b605559e84
 MN09_VIVO=1681556050eb477e7fd50bffe3c4af87427cde7d37fc72fdd9f1dc40c2b9fa8b
@@ -92,7 +92,7 @@ MN02_DOGEC=DRMyXZPj1DjvPDwQ8g7eqDPb33N8fcfgvA
 MN03_DOGEC=DHM9xTzXMnDCeiGpmMmqrsNPMa1sJmvfaA
 MN04_DOGEC=DDiScS5Am1XapDiVCN33CPyj1Z51Ynyg6Z
 MN05_DOGEC=DB3a7q2Z6srh8zSkmeA1an9zfP3rLypJ5p
-MN06_DOGEC=77ba2f27b86303649641a544de2f3318a32fb73d545bac9a4120422c5339225a
+MN06_DOGEC=DUG29eHSzPsdQ3omM9KTPP8xw3M3v58D6g
 MN07_DOGEC=353e6be4165292ef8bbb391869c657d199e609c06b3cde9c1738e9c50a4be20b
 MN08_DOGEC=59a8fcf54247b56b169a4eb1c67b0b4bbb3d718ac720f932e9648ad1c8bc8f39
 MN09_DOGEC=f2b769e39cb478facabcdbd5a364d753f18d4cbe8774e96872bbc6d33b1b8080
@@ -375,7 +375,7 @@ LS1=$(($CU - $LS))
 #echo "CU:$CU ->LS:$LS ->LS1:$LS1"
 echo "$LS1"
 }
-
+clear
 
 ###########################################################################
 ###########################################################################
@@ -387,7 +387,7 @@ echo "MN02  Conferme: $(Calcola_LP_Vivo $MN02_VIVO) - $(Calcola_Status_Vivo $MN0
 #echo "MN03  Conferme: $(Calcola_LP_Vivo $MN03_VIVO) - $(Calcola_Status_Vivo $MN03_VIVO) - $(Calcola_LastSeen_Vivo $MN03_VIVO)"
 #echo "MN04  Conferme: $(Calcola_LP_Vivo $MN04_VIVO) - $(Calcola_Status_Vivo $MN04_VIVO) - $(Calcola_LastSeen_Vivo $MN04_VIVO)"
 #echo "MN05  Conferme: $(Calcola_LP_Vivo $MN05_VIVO) - $(Calcola_Status_Vivo $MN05_VIVO) - $(Calcola_LastSeen_Vivo $MN05_VIVO)"
-#echo "MN06  Conferme: $(Calcola_LP_Vivo $MN06_VIVO) - $(Calcola_Status_Vivo $MN06_VIVO) - $(Calcola_LastSeen_Vivo $MN06_VIVO)"
+echo "MN06  Conferme: $(Calcola_LP_Vivo $MN06_VIVO) - $(Calcola_Status_Vivo $MN06_VIVO) - $(Calcola_LastSeen_Vivo $MN06_VIVO)"
 #echo "MN07  Conferme: $(Calcola_LP_Vivo $MN07_VIVO) - $(Calcola_Status_Vivo $MN07_VIVO) - $(Calcola_LastSeen_Vivo $MN07_VIVO)"
 echo "MN08  Conferme: $(Calcola_LP_Vivo $MN08_VIVO) - $(Calcola_Status_Vivo $MN08_VIVO) - $(Calcola_LastSeen_Vivo $MN08_VIVO)"
 echo "MN09  Conferme: $(Calcola_LP_Vivo $MN09_VIVO) - $(Calcola_Status_Vivo $MN09_VIVO) - $(Calcola_LastSeen_Vivo $MN09_VIVO)"
@@ -432,7 +432,7 @@ echo "MN02  Conferme: $(Calcola_LP_Dogec $MN02_DOGEC) - $(Calcola_Status_Dogec $
 echo "MN03  Conferme: $(Calcola_LP_Dogec $MN03_DOGEC) - $(Calcola_Status_Dogec $MN03_DOGEC) - $(Calcola_LastSeen_Dogec $MN03_DOGEC)"
 echo "MN04  Conferme: $(Calcola_LP_Dogec $MN04_DOGEC) - $(Calcola_Status_Dogec $MN04_DOGEC) - $(Calcola_LastSeen_Dogec $MN04_DOGEC)"
 echo "MN05  Conferme: $(Calcola_LP_Dogec $MN05_DOGEC) - $(Calcola_Status_Dogec $MN05_DOGEC) - $(Calcola_LastSeen_Dogec $MN05_DOGEC)"
-#echo "MN06  Conferme: $(Calcola_LP_Dogec $MN06_DOGEC) - $(Calcola_Status_Dogec $MN06_DOGEC) - $(Calcola_LastSeen_Dogec $MN06_DOGEC)"
+echo "MN06  Conferme: $(Calcola_LP_Dogec $MN06_DOGEC) - $(Calcola_Status_Dogec $MN06_DOGEC) - $(Calcola_LastSeen_Dogec $MN06_DOGEC)"
 #echo "MN07  Conferme: $(Calcola_LP_Dogec $MN07_DOGEC) - $(Calcola_Status_Dogec $MN07_DOGEC) - $(Calcola_LastSeen_Dogec $MN07_DOGEC)"
 #echo "MN08  Conferme: $(Calcola_LP_Dogec $MN08_DOGEC) - $(Calcola_Status_Dogec $MN08_DOGEC) - $(Calcola_LastSeen_Dogec $MN08_DOGEC)"
 #echo "MN09  Conferme: $(Calcola_LP_Dogec $MN09_DOGEC) - $(Calcola_Status_Dogec $MN09_DOGEC) - $(Calcola_LastSeen_Dogec $MN09_DOGEC)"
