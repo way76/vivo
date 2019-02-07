@@ -229,7 +229,7 @@ LP=$(dogecash-cli  getmasternodewinners $TN | grep $1 -A 2  -B 2)
 #divido la risposta in array e conservo 23esimo elemento
 #echo "Lp ricevuto :$LP:"
 a=( $LP )
-LP=${a[1]}
+LP=${a[2]}
 CONF=$(($TB_DOGEC - $LP))
 DIFF=$(($AN_DOGEC - $CONF))
 echo "$CONF ($DIFF)"
