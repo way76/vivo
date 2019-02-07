@@ -217,7 +217,9 @@ echo $LS
 ###########################################################################
 ###########################################################################
 Calcola_LP_Dogec(){
-LP=$(dogecash-cli  getmasternodewinners $AN_DOGEC * 1.9 | grep $1 -A 2  -B 2)
+
+TN=$(expr $AN_DOGEC \* 1.9)
+LP=$(dogecash-cli  getmasternodewinners $TN | grep $1 -A 2  -B 2)
 # "nHeight" : 183251,
 #        "winner" : {
 #            "address" : "DUG29eHSzPsdQ3omM9KTPP8xw3M3v58D6g",
@@ -291,7 +293,8 @@ echo "$LS1"
 ###########################################################################
 Calcola_LP_Snd()
 {
-LP=$(snodecoin-cli getmasternodewinners $AN_SND*1.9 | grep $1 -A 2 -B 2)
+TN=$(expr $AN_SND \* 1.9)
+LP=$(snodecoin-cli getmasternodewinners $TN | grep $1 -A 2 -B 2)
 #ottengo una risposta tipo
 # "nHeight": 144649,
 #    "winner": {
