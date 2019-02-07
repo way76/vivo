@@ -217,8 +217,7 @@ echo $LS
 ###########################################################################
 ###########################################################################
 Calcola_LP_Dogec(){
-
-let "TN=$AN_DOGEC + $AN_DOGEC -50"
+let "TN=$AN_DOGEC + $AN_DOGEC -10"
 LP=$(dogecash-cli  getmasternodewinners $TN | grep $1 -A 2  -B 2)
 # "nHeight" : 183251,
 #        "winner" : {
@@ -227,12 +226,16 @@ LP=$(dogecash-cli  getmasternodewinners $TN | grep $1 -A 2  -B 2)
 #        }
 
 #divido la risposta in array e conservo 23esimo elemento
-#echo "Lp ricevuto :$LP:"
 a=( $LP )
-LP=${a[2]}
+#LP=${a[2]}
+e=$(echo "${#a[@]}")
+
+LP=${a[e-11]}
+LP=${LP//[,]/}
 CONF=$(($TB_DOGEC - $LP))
 DIFF=$(($AN_DOGEC - $CONF))
 echo "$CONF ($DIFF)"
+
 }
 
 Calcola_Status_Dogec(){
