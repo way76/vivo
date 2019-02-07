@@ -298,25 +298,18 @@ echo "$LS1"
 ###########################################################################
 Calcola_LP_Snd()
 {
-LP=$(snodecoin-cli masternode list | grep $1 -A 5  -B 6)
+LP=$(snodecoin-cli getmasternodewinners 2000  | grep $1 -A 2 -B 2)
 #ottengo una risposta tipo
-# {
-#    "rank": 136,
-#    "network": "ipv4",
-#    "txhash": "b0ca9bc6b65df74d1a750d2208fca7a1f26b33fa0da21d6eb355e551a9197c1c",
-#    "outidx": 0,
-#    "status": "ENABLED",
-#    "addr": "SX1xZQLpDwPPd7mSwV7MngSLNXZUuTy1MG",
-#    "version": 70921,
-#    "lastseen": 1549097241,
-#    "activetime": 59794,
-#    "lastpaid": 0
-#  },
+# "nHeight": 144649,
+#    "winner": {
+#      "address": "SgQLcXHh7gQeJ1PxgxRUHCnmqZr7tAdKYy",
+#      "nVotes": 5
+#    }
 #
 #divido la risposta in array e conservo 21esimo elemento
 #echo "Lp ricevuto :$LP:"
 a=( $LP )
-LP=${a[20]}
+LP=${a[2]}
 #echo ${a[1]}
 #echo ${a[2]}
 CONF=$(($TB_SND - $LP))
