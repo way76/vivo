@@ -218,7 +218,7 @@ echo $LS
 ###########################################################################
 Calcola_LP_Dogec(){
 
-TN='echo "$AN_DOGEC * 1.9" | bc'
+TN='echo "$AN_DOGEC * 2 - 20" | bc'
 LP=$(dogecash-cli  getmasternodewinners $TN | grep $1 -A 2  -B 2)
 # "nHeight" : 183251,
 #        "winner" : {
@@ -293,7 +293,7 @@ echo "$LS1"
 ###########################################################################
 Calcola_LP_Snd()
 {
-TN='echo "$AN_SND * 1.9" | bc'
+TN='echo "$AN_SND * 2 - 20" | bc'
 LP=$(snodecoin-cli getmasternodewinners $TN | grep $1 -A 2 -B 2)
 #ottengo una risposta tipo
 # "nHeight": 144649,
