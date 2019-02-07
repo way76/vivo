@@ -220,6 +220,8 @@ Calcola_LP_Dogec(){
 
 TN='echo "$AN_DOGEC * 2 - 20" | bc'
 LP=$(dogecash-cli  getmasternodewinners $TN | grep $1 -A 2  -B 2)
+echo "TN :$TN:"
+echo "LP :$LP:"
 # "nHeight" : 183251,
 #        "winner" : {
 #            "address" : "DUG29eHSzPsdQ3omM9KTPP8xw3M3v58D6g",
