@@ -309,7 +309,7 @@ LP=$(snodecoin-cli getmasternodewinners 2000  | grep $1 -A 2 -B 2)
 #divido la risposta in array e conservo 21esimo elemento
 #echo "Lp ricevuto :$LP:"
 a=( $LP )
-LP=${a[2]}
+LP=${a[1]}
 #echo ${a[1]}
 #echo ${a[2]}
 CONF=$(($TB_SND - $LP))
