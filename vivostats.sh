@@ -217,24 +217,17 @@ echo $LS
 ###########################################################################
 ###########################################################################
 Calcola_LP_Dogec(){
-LP=$(dogecash-cli listmasternodes  | grep $1 -A 5  -B 6)
-#{
-#        "rank" : 304,
-#        "network" : "ipv4",
-#        "txhash" : "3c353ac9060c9ec9ca6fd08a443efc73b87647212eddf5fb3858f04472793e0b",
-#        "outidx" : 1,
-#        "status" : "ENABLED",
-#        "addr" : "DHGZLafWBHscpTseLVBm58UDFcAwYmf3yr",
-#        "ip:port" : "80.211.213.40:6740",
-#        "version" : 72018,
-#        "lastseen" : 1549109015,
-#        "activetime" : 5551247,
-#        "lastpaid" : 1549098756
-#
+LP=$(dogecash-cli  getmasternodewinners $AN_DOGEC * 1.9 | grep $1 -A 2  -B 2)
+# "nHeight" : 183251,
+#        "winner" : {
+#            "address" : "DUG29eHSzPsdQ3omM9KTPP8xw3M3v58D6g",
+#            "nVotes" : 10
+#        }
+
 #divido la risposta in array e conservo 23esimo elemento
 #echo "Lp ricevuto :$LP:"
 a=( $LP )
-LP=${a[33]}
+LP=${a[1]}
 CONF=$(($TB_DOGEC - $LP))
 DIFF=$(($AN_DOGEC - $CONF))
 echo "$CONF ($DIFF)"
@@ -298,7 +291,7 @@ echo "$LS1"
 ###########################################################################
 Calcola_LP_Snd()
 {
-LP=$(snodecoin-cli getmasternodewinners 2000  | grep $1 -A 2 -B 2)
+LP=$(snodecoin-cli getmasternodewinners $AN_SND*1.9 | grep $1 -A 2 -B 2)
 #ottengo una risposta tipo
 # "nHeight": 144649,
 #    "winner": {
