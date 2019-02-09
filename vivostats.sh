@@ -47,6 +47,7 @@ TB_DOGEC=$(curl -s4 "https://explorer.dogec.io/api/getblockcount")
 AN_DOGEC=$(Calcola_Attivi_Dogec)
 LB_DOGEC=$(dogecash-cli getblockcount)
 
+
 #definisco masternode vivo
 MN01_VIVO=b96cc9d0e44cf4b6b7b2f80f8f42446af13a427916b881964c8ed667d9bd4937
 MN02_VIVO=57f88b7a779679d699c60407172faeb1a1d0fc72661236e71b94be1cc012cfbb
@@ -59,6 +60,15 @@ MN08_VIVO=0377f205fbcb4014f9c512e7f7314d03719464a3ab28d771d1a249b605559e84
 MN09_VIVO=1681556050eb477e7fd50bffe3c4af87427cde7d37fc72fdd9f1dc40c2b9fa8b
 MN10_VIVO=d99cb3dd22093f50ea4de2ab3f29dde095ebea3f4d029e671a95f4e68ade3450
 MN11_VIVO=3006a6bcef5589c2ed0568363170f95eb5282fb9630c510182916ed14b762129
+MN12_VIVO=6fa76b8ecb2a5adaad4e2aa0673c3987d852828f0bec38d29681146648ec3cc8
+MN13_VIVO=f62f36bf014362d23f062f4a75b11a8a287cda869d2e1fafba949fd5169326aa
+MN14_VIVO=215c5a3df098bc3bbe7193f7edbf2ff475ca725ea2f0ce61be76e69c71754c3e
+MN15_VIVO=7e1ec3247d19f8fcbb1ab33c746dbdd38bade61292fba3970b10a53841aab754
+MN16_VIVO=2811b4f70e692f853880c6ad71a02f861d12607b23a09843f8134cc4971c3873
+MN17_VIVO=5e19964393b471eed7807bd133ceab8097f32fac92d5c2bc84c8f4852075aabd
+MN18_VIVO=d141bd7706b86c1e9bda8c703532904b5e460fedbd614b6049f0c4a0fbc9d3a1
+MN19_VIVO=9f56ab9a727a5779f27f0640661f8fcc949660fee2e5d6e8de9c3f1c66feb3bc
+MN20_VIVO=48069417377ff4240cbf071685448a833ccca49fb13c577ea8b225c971bc7592
 
 #definisco masternode stone
 MN01_STONE=59a6911cb6fd624e153042988e316b2976b51f11aa9aae0f5e382f235d225f02
@@ -217,7 +227,7 @@ echo $LS
 ###########################################################################
 ###########################################################################
 Calcola_LP_Dogec(){
-let "TN=$AN_DOGEC + $AN_DOGEC -200"
+let "TN=$AN_DOGEC + $AN_DOGEC -10"
 LP=$(dogecash-cli  getmasternodewinners $TN | grep $1 -A 2  -B 2)
 # "nHeight" : 183251,
 #        "winner" : {
@@ -296,7 +306,7 @@ echo "$LS1"
 ###########################################################################
 Calcola_LP_Snd()
 {
-let "TN=$AN_SND + $AN_DOGEC -200"
+let "TN=$AN_SND + $AN_DOGEC -50"
 LP=$(snodecoin-cli getmasternodewinners $TN | grep $1 -A 2 -B 2)
 #ottengo una risposta tipo
 # "nHeight": 144649,
@@ -386,6 +396,15 @@ echo "MN08  Conferme: $(Calcola_LP_Vivo $MN08_VIVO) - $(Calcola_Status_Vivo $MN0
 echo "MN09  Conferme: $(Calcola_LP_Vivo $MN09_VIVO) - $(Calcola_Status_Vivo $MN09_VIVO) - $(Calcola_LastSeen_Vivo $MN09_VIVO)"
 #echo "MN10  Conferme: $(Calcola_LP_Vivo $MN10_VIVO) - $(Calcola_Status_Vivo $MN10_VIVO) - $(Calcola_LastSeen_Vivo $MN10_VIVO)"
 #echo "MN11  Conferme: $(Calcola_LP_Vivo $MN11_VIVO) - $(Calcola_Status_Vivo $MN11_VIVO) - $(Calcola_LastSeen_Vivo $MN11_VIVO)"
+echo "Contabo_MN05_01  Conferme: $(Calcola_LP_Vivo $MN12_VIVO) - $(Calcola_Status_Vivo $MN12_VIVO) - $(Calcola_LastSeen_Vivo $MN12_VIVO)"
+echo "Contabo_MN05_02  Conferme: $(Calcola_LP_Vivo $MN13_VIVO) - $(Calcola_Status_Vivo $MN13_VIVO) - $(Calcola_LastSeen_Vivo $MN13_VIVO)"
+echo "Contabo_MN05_03  Conferme: $(Calcola_LP_Vivo $MN14_VIVO) - $(Calcola_Status_Vivo $MN14_VIVO) - $(Calcola_LastSeen_Vivo $MN14_VIVO)"
+echo "Contabo_MN05_04  Conferme: $(Calcola_LP_Vivo $MN15_VIVO) - $(Calcola_Status_Vivo $MN15_VIVO) - $(Calcola_LastSeen_Vivo $MN15_VIVO)"
+echo "Contabo_MN05_05  Conferme: $(Calcola_LP_Vivo $MN16_VIVO) - $(Calcola_Status_Vivo $MN16_VIVO) - $(Calcola_LastSeen_Vivo $MN16_VIVO)"
+echo "Contabo_MN05_06  Conferme: $(Calcola_LP_Vivo $MN17_VIVO) - $(Calcola_Status_Vivo $MN17_VIVO) - $(Calcola_LastSeen_Vivo $MN17_VIVO)"
+echo "Contabo_MN05_07  Conferme: $(Calcola_LP_Vivo $MN18_VIVO) - $(Calcola_Status_Vivo $MN18_VIVO) - $(Calcola_LastSeen_Vivo $MN18_VIVO)"
+echo "Contabo_MN05_08  Conferme: $(Calcola_LP_Vivo $MN19_VIVO) - $(Calcola_Status_Vivo $MN19_VIVO) - $(Calcola_LastSeen_Vivo $MN19_VIVO)"
+echo "Contabo_MN05_09  Conferme: $(Calcola_LP_Vivo $MN20_VIVO) - $(Calcola_Status_Vivo $MN20_VIVO) - $(Calcola_LastSeen_Vivo $MN20_VIVO)"
 echo " "
 echo "Stone status"
 echo "Blocchi : $LB_STONE / $TB_STONE  Masternodes: $AN_STONE"
