@@ -47,28 +47,27 @@ TB_DOGEC=$(curl -s4 "https://explorer.dogec.io/api/getblockcount")
 AN_DOGEC=$(Calcola_Attivi_Dogec)
 LB_DOGEC=$(dogecash-cli getblockcount)
 
-
 #definisco masternode vivo
-MN01_VIVO=b96cc9d0e44cf4b6b7b2f80f8f42446af13a427916b881964c8ed667d9bd4937
-MN02_VIVO=57f88b7a779679d699c60407172faeb1a1d0fc72661236e71b94be1cc012cfbb
-MN03_VIVO=a5cd3329eb2885266aa9b737fec66fdd8ec696a059fa4d5c88313e74bae1cc14
-MN04_VIVO=240e265e6c604f6ab118ae5b6dd4df8ee9f3507e249531dc92e94444cf6667fe
-MN05_VIVO=e6261cee3cd8714874648cde55dd2a13c5fda67647c34323649e5f7d8c9019a7
-MN06_VIVO=943c067c2dd8037199edb4aa98fd0d53ed0657e14f3b97cddf9d94613278b6de
-MN07_VIVO=22737c5f3a1a606869902e4e2572ec68e62b61f2566c7ada07469e644bdef17f
-MN08_VIVO=0377f205fbcb4014f9c512e7f7314d03719464a3ab28d771d1a249b605559e84
-MN09_VIVO=1681556050eb477e7fd50bffe3c4af87427cde7d37fc72fdd9f1dc40c2b9fa8b
-MN10_VIVO=d99cb3dd22093f50ea4de2ab3f29dde095ebea3f4d029e671a95f4e68ade3450
-MN11_VIVO=3006a6bcef5589c2ed0568363170f95eb5282fb9630c510182916ed14b762129
-MN12_VIVO=6fa76b8ecb2a5adaad4e2aa0673c3987d852828f0bec38d29681146648ec3cc8
-MN13_VIVO=f62f36bf014362d23f062f4a75b11a8a287cda869d2e1fafba949fd5169326aa
-MN14_VIVO=215c5a3df098bc3bbe7193f7edbf2ff475ca725ea2f0ce61be76e69c71754c3e
-MN15_VIVO=7e1ec3247d19f8fcbb1ab33c746dbdd38bade61292fba3970b10a53841aab754
-MN16_VIVO=2811b4f70e692f853880c6ad71a02f861d12607b23a09843f8134cc4971c3873
-MN17_VIVO=5e19964393b471eed7807bd133ceab8097f32fac92d5c2bc84c8f4852075aabd
-MN18_VIVO=d141bd7706b86c1e9bda8c703532904b5e460fedbd614b6049f0c4a0fbc9d3a1
-MN19_VIVO=9f56ab9a727a5779f27f0640661f8fcc949660fee2e5d6e8de9c3f1c66feb3bc
-MN20_VIVO=48069417377ff4240cbf071685448a833ccca49fb13c577ea8b225c971bc7592
+MN01_VIVO=6fa76b8ecb2a5adaad4e2aa0673c3987d852828f0bec38d29681146648ec3cc8
+MN02_VIVO=f62f36bf014362d23f062f4a75b11a8a287cda869d2e1fafba949fd5169326aa
+MN03_VIVO=215c5a3df098bc3bbe7193f7edbf2ff475ca725ea2f0ce61be76e69c71754c3e
+MN04_VIVO=7e1ec3247d19f8fcbb1ab33c746dbdd38bade61292fba3970b10a53841aab754
+MN05_VIVO=2811b4f70e692f853880c6ad71a02f861d12607b23a09843f8134cc4971c3873
+MN06_VIVO=5e19964393b471eed7807bd133ceab8097f32fac92d5c2bc84c8f4852075aabd
+MN07_VIVO=d141bd7706b86c1e9bda8c703532904b5e460fedbd614b6049f0c4a0fbc9d3a1
+MN08_VIVO=9f56ab9a727a5779f27f0640661f8fcc949660fee2e5d6e8de9c3f1c66feb3bc
+MN09_VIVO=48069417377ff4240cbf071685448a833ccca49fb13c577ea8b225c971bc7592
+MN10_VIVO=362be0ca9bc137729a43bdd514402765ad0438e0958d71b78ab9886e2581e839
+MN11_VIVO=fd0ac45d172b73795e9d3755a444a9e75eba082579f971b55309827123cf17e8
+MN12_VIVO=f1a38109e2d9496be5462a7bda2d92e176e6503128df87b97363f86743a167fc
+MN13_VIVO=ac410ec434632bc5c8f5d66a251ce945d657ad9cf8051bfc06ee2d05d2c04ac3
+MN14_VIVO=6fa5662cdd2d78cdd255e9c2059b116838c4c49da0058cf7f70aa7a5b9304dfb
+MN15_VIVO=943c067c2dd8037199edb4aa98fd0d53ed0657e14f3b97cddf9d94613278b6de
+MN16_VIVO=1681556050eb477e7fd50bffe3c4af87427cde7d37fc72fdd9f1dc40c2b9fa8b
+MN17_VIVO=1681556050eb477e7fd50bffe3c4af87427cde7d37fc72fdd9f1dc40c2b9fa8b
+MN18_VIVO=1681556050eb477e7fd50bffe3c4af87427cde7d37fc72fdd9f1dc40c2b9fa8b
+MN19_VIVO=1681556050eb477e7fd50bffe3c4af87427cde7d37fc72fdd9f1dc40c2b9fa8b
+MN20_VIVO=1681556050eb477e7fd50bffe3c4af87427cde7d37fc72fdd9f1dc40c2b9fa8b
 
 #definisco masternode stone
 MN01_STONE=59a6911cb6fd624e153042988e316b2976b51f11aa9aae0f5e382f235d225f02
@@ -385,26 +384,29 @@ clear
 echo "VivoCoin status"
 echo "Blocchi : $LB_VIVO / $TB_VIVO  Masternodes: $AN_VIVO"
 echo " "
-echo "MN01  Conferme: $(Calcola_LP_Vivo $MN01_VIVO) - $(Calcola_Status_Vivo $MN01_VIVO) - $(Calcola_LastSeen_Vivo $MN01_VIVO)"
-echo "MN02  Conferme: $(Calcola_LP_Vivo $MN02_VIVO) - $(Calcola_Status_Vivo $MN02_VIVO) - $(Calcola_LastSeen_Vivo $MN02_VIVO)"
-#echo "MN03  Conferme: $(Calcola_LP_Vivo $MN03_VIVO) - $(Calcola_Status_Vivo $MN03_VIVO) - $(Calcola_LastSeen_Vivo $MN03_VIVO)"
-#echo "MN04  Conferme: $(Calcola_LP_Vivo $MN04_VIVO) - $(Calcola_Status_Vivo $MN04_VIVO) - $(Calcola_LastSeen_Vivo $MN04_VIVO)"
-#echo "MN05  Conferme: $(Calcola_LP_Vivo $MN05_VIVO) - $(Calcola_Status_Vivo $MN05_VIVO) - $(Calcola_LastSeen_Vivo $MN05_VIVO)"
-echo "MN06  Conferme: $(Calcola_LP_Vivo $MN06_VIVO) - $(Calcola_Status_Vivo $MN06_VIVO) - $(Calcola_LastSeen_Vivo $MN06_VIVO)"
-#echo "MN07  Conferme: $(Calcola_LP_Vivo $MN07_VIVO) - $(Calcola_Status_Vivo $MN07_VIVO) - $(Calcola_LastSeen_Vivo $MN07_VIVO)"
-echo "MN08  Conferme: $(Calcola_LP_Vivo $MN08_VIVO) - $(Calcola_Status_Vivo $MN08_VIVO) - $(Calcola_LastSeen_Vivo $MN08_VIVO)"
-echo "MN09  Conferme: $(Calcola_LP_Vivo $MN09_VIVO) - $(Calcola_Status_Vivo $MN09_VIVO) - $(Calcola_LastSeen_Vivo $MN09_VIVO)"
-#echo "MN10  Conferme: $(Calcola_LP_Vivo $MN10_VIVO) - $(Calcola_Status_Vivo $MN10_VIVO) - $(Calcola_LastSeen_Vivo $MN10_VIVO)"
-#echo "MN11  Conferme: $(Calcola_LP_Vivo $MN11_VIVO) - $(Calcola_Status_Vivo $MN11_VIVO) - $(Calcola_LastSeen_Vivo $MN11_VIVO)"
-echo "Contabo_MN05_01  Conferme: $(Calcola_LP_Vivo $MN12_VIVO) - $(Calcola_Status_Vivo $MN12_VIVO) - $(Calcola_LastSeen_Vivo $MN12_VIVO)"
-echo "Contabo_MN05_02  Conferme: $(Calcola_LP_Vivo $MN13_VIVO) - $(Calcola_Status_Vivo $MN13_VIVO) - $(Calcola_LastSeen_Vivo $MN13_VIVO)"
-echo "Contabo_MN05_03  Conferme: $(Calcola_LP_Vivo $MN14_VIVO) - $(Calcola_Status_Vivo $MN14_VIVO) - $(Calcola_LastSeen_Vivo $MN14_VIVO)"
-echo "Contabo_MN05_04  Conferme: $(Calcola_LP_Vivo $MN15_VIVO) - $(Calcola_Status_Vivo $MN15_VIVO) - $(Calcola_LastSeen_Vivo $MN15_VIVO)"
-echo "Contabo_MN05_05  Conferme: $(Calcola_LP_Vivo $MN16_VIVO) - $(Calcola_Status_Vivo $MN16_VIVO) - $(Calcola_LastSeen_Vivo $MN16_VIVO)"
-echo "Contabo_MN05_06  Conferme: $(Calcola_LP_Vivo $MN17_VIVO) - $(Calcola_Status_Vivo $MN17_VIVO) - $(Calcola_LastSeen_Vivo $MN17_VIVO)"
-echo "Contabo_MN05_07  Conferme: $(Calcola_LP_Vivo $MN18_VIVO) - $(Calcola_Status_Vivo $MN18_VIVO) - $(Calcola_LastSeen_Vivo $MN18_VIVO)"
-echo "Contabo_MN05_08  Conferme: $(Calcola_LP_Vivo $MN19_VIVO) - $(Calcola_Status_Vivo $MN19_VIVO) - $(Calcola_LastSeen_Vivo $MN19_VIVO)"
-echo "Contabo_MN05_09  Conferme: $(Calcola_LP_Vivo $MN20_VIVO) - $(Calcola_Status_Vivo $MN20_VIVO) - $(Calcola_LastSeen_Vivo $MN20_VIVO)"
+echo "Contabo_MN05_01  Conferme: $(Calcola_LP_Vivo $MN01_VIVO) - $(Calcola_Status_Vivo $MN01_VIVO) - $(Calcola_LastSeen_Vivo $MN01_VIVO)"
+echo "Contabo_MN05_02  Conferme: $(Calcola_LP_Vivo $MN02_VIVO) - $(Calcola_Status_Vivo $MN02_VIVO) - $(Calcola_LastSeen_Vivo $MN02_VIVO)"
+echo "Contabo_MN05_03  Conferme: $(Calcola_LP_Vivo $MN03_VIVO) - $(Calcola_Status_Vivo $MN03_VIVO) - $(Calcola_LastSeen_Vivo $MN03_VIVO)"
+echo "Contabo_MN05_04  Conferme: $(Calcola_LP_Vivo $MN04_VIVO) - $(Calcola_Status_Vivo $MN04_VIVO) - $(Calcola_LastSeen_Vivo $MN04_VIVO)"
+echo "Contabo_MN05_05  Conferme: $(Calcola_LP_Vivo $MN05_VIVO) - $(Calcola_Status_Vivo $MN05_VIVO) - $(Calcola_LastSeen_Vivo $MN05_VIVO)"
+echo "Contabo_MN05_06  Conferme: $(Calcola_LP_Vivo $MN06_VIVO) - $(Calcola_Status_Vivo $MN06_VIVO) - $(Calcola_LastSeen_Vivo $MN06_VIVO)"
+echo "Contabo_MN05_07  Conferme: $(Calcola_LP_Vivo $MN07_VIVO) - $(Calcola_Status_Vivo $MN07_VIVO) - $(Calcola_LastSeen_Vivo $MN07_VIVO)"
+echo "Contabo_MN05_08  Conferme: $(Calcola_LP_Vivo $MN08_VIVO) - $(Calcola_Status_Vivo $MN08_VIVO) - $(Calcola_LastSeen_Vivo $MN08_VIVO)"
+echo "Contabo_MN05_09  Conferme: $(Calcola_LP_Vivo $MN09_VIVO) - $(Calcola_Status_Vivo $MN09_VIVO) - $(Calcola_LastSeen_Vivo $MN09_VIVO)"
+echo "Contabo_MN05_10  Conferme: $(Calcola_LP_Vivo $MN10_VIVO) - $(Calcola_Status_Vivo $MN10_VIVO) - $(Calcola_LastSeen_Vivo $MN10_VIVO)"
+echo "Contabo_MN05_11  Conferme: $(Calcola_LP_Vivo $MN11_VIVO) - $(Calcola_Status_Vivo $MN11_VIVO) - $(Calcola_LastSeen_Vivo $MN11_VIVO)"
+echo "Contabo_MN05_12  Conferme: $(Calcola_LP_Vivo $MN12_VIVO) - $(Calcola_Status_Vivo $MN12_VIVO) - $(Calcola_LastSeen_Vivo $MN12_VIVO)"
+echo "Contabo_MN05_13  Conferme: $(Calcola_LP_Vivo $MN13_VIVO) - $(Calcola_Status_Vivo $MN13_VIVO) - $(Calcola_LastSeen_Vivo $MN13_VIVO)"
+echo "Contabo_MN05_14  Conferme: $(Calcola_LP_Vivo $MN14_VIVO) - $(Calcola_Status_Vivo $MN14_VIVO) - $(Calcola_LastSeen_Vivo $MN14_VIVO)"
+echo "Contabo_MN05_15  Conferme: $(Calcola_LP_Vivo $MN15_VIVO) - $(Calcola_Status_Vivo $MN15_VIVO) - $(Calcola_LastSeen_Vivo $MN15_VIVO)"
+echo "Contabo_MN05_16  Conferme: $(Calcola_LP_Vivo $MN16_VIVO) - $(Calcola_Status_Vivo $MN16_VIVO) - $(Calcola_LastSeen_Vivo $MN16_VIVO)"
+echo "Contabo_MN05_17  Conferme: $(Calcola_LP_Vivo $MN17_VIVO) - $(Calcola_Status_Vivo $MN17_VIVO) - $(Calcola_LastSeen_Vivo $MN17_VIVO)"
+echo "Contabo_MN05_18  Conferme: $(Calcola_LP_Vivo $MN18_VIVO) - $(Calcola_Status_Vivo $MN18_VIVO) - $(Calcola_LastSeen_Vivo $MN18_VIVO)"
+echo "Contabo_MN05_19  Conferme: $(Calcola_LP_Vivo $MN19_VIVO) - $(Calcola_Status_Vivo $MN19_VIVO) - $(Calcola_LastSeen_Vivo $MN19_VIVO)"
+echo "Contabo_MN05_20  Conferme: $(Calcola_LP_Vivo $MN20_VIVO) - $(Calcola_Status_Vivo $MN20_VIVO) - $(Calcola_LastSeen_Vivo $MN20_VIVO)"
+
+
+
 echo " "
 echo "Stone status"
 echo "Blocchi : $LB_STONE / $TB_STONE  Masternodes: $AN_STONE"
