@@ -44,6 +44,7 @@ AN_SND=$(Calcola_Attivi_Snd)
 LB_SND=$(snodecoin-cli getblockcount)
 
 TB_DOGEC=$(curl -s4 "https://explorer.dogec.io/api/getblockcount")
+TB_DOGEC=$(curl -s4 "https://api.dogec.io/api/getblockcount")
 AN_DOGEC=$(Calcola_Attivi_Dogec)
 LB_DOGEC=$(dogecash-cli getblockcount)
 
