@@ -27,17 +27,17 @@ Calcola_Attivi_Dogec()
 
 
 
-TB_VIVO=$(curl -s4 "http://149.28.83.1:3001/api/getblockcount")
-AN_VIVO=$(su mnv -c  "vivo-cli masternode count enabled")
-LB_VIVO=$(su mnv -c  "vivo-cli getblockcount")
+#TB_VIVO=$(curl -s4 "http://149.28.83.1:3001/api/getblockcount")
+#AN_VIVO=$(su mnv -c  "vivo-cli masternode count enabled")
+#LB_VIVO=$(su mnv -c  "vivo-cli getblockcount")
 
-TB_STONE=$(curl -s4 "http://explorer.stonecoin.rocks/api/getblockcount")
-AN_STONE=$(stone-cli masternode count enabled)
-LB_STONE=$(stone-cli getblockcount)
+#TB_STONE=$(curl -s4 "http://explorer.stonecoin.rocks/api/getblockcount")
+#AN_STONE=$(stone-cli masternode count enabled)
+#LB_STONE=$(stone-cli getblockcount)
 
-TB_INN=$(curl -s4 "http://explorer.innovacoin.info/api/getblockcount")
-AN_INN=$(innova-cli masternode count enabled)
-LB_INN=$(innova-cli getblockcount)
+#TB_INN=$(curl -s4 "http://explorer.innovacoin.info/api/getblockcount")
+#AN_INN=$(innova-cli masternode count enabled)
+#LB_INN=$(innova-cli getblockcount)
 
 TB_SND=$(curl -s4 "https://explorer.snode.co/api/getblockcount")
 AN_SND=$(Calcola_Attivi_Snd) 
@@ -449,19 +449,19 @@ echo "Dogec status"
 echo "Blocchi : $LB_DOGEC / $TB_DOGEC  Masternodes: $AN_DOGEC"
 echo " "
 echo " MN01  Conferme: $(Calcola_LP_Dogec $MN01_DOGEC) - $(Calcola_Status_Dogec $MN01_DOGEC) - $(Calcola_LastSeen_Dogec $MN01_DOGEC)"
-echo " MN02  Conferme: $(Calcola_LP_Dogec $MN02_DOGEC) - $(Calcola_Status_Dogec $MN02_DOGEC) - $(Calcola_LastSeen_Dogec $MN02_DOGEC)"
-echo " MN03  Conferme: $(Calcola_LP_Dogec $MN03_DOGEC) - $(Calcola_Status_Dogec $MN03_DOGEC) - $(Calcola_LastSeen_Dogec $MN03_DOGEC)"
-echo "CMN01  Conferme: $(Calcola_LP_Dogec $MN04_DOGEC) - $(Calcola_Status_Dogec $MN04_DOGEC) - $(Calcola_LastSeen_Dogec $MN04_DOGEC)"
+#echo " MN02  Conferme: $(Calcola_LP_Dogec $MN02_DOGEC) - $(Calcola_Status_Dogec $MN02_DOGEC) - $(Calcola_LastSeen_Dogec $MN02_DOGEC)"
+echo " MN06  Conferme: $(Calcola_LP_Dogec $MN03_DOGEC) - $(Calcola_Status_Dogec $MN03_DOGEC) - $(Calcola_LastSeen_Dogec $MN03_DOGEC)"
+#echo "CMN01  Conferme: $(Calcola_LP_Dogec $MN04_DOGEC) - $(Calcola_Status_Dogec $MN04_DOGEC) - $(Calcola_LastSeen_Dogec $MN04_DOGEC)"
 echo "CMN02  Conferme: $(Calcola_LP_Dogec $MN05_DOGEC) - $(Calcola_Status_Dogec $MN05_DOGEC) - $(Calcola_LastSeen_Dogec $MN05_DOGEC)"
-echo "CMN03  Conferme: $(Calcola_LP_Dogec $MN06_DOGEC) - $(Calcola_Status_Dogec $MN06_DOGEC) - $(Calcola_LastSeen_Dogec $MN06_DOGEC)"
+#echo "CMN03  Conferme: $(Calcola_LP_Dogec $MN06_DOGEC) - $(Calcola_Status_Dogec $MN06_DOGEC) - $(Calcola_LastSeen_Dogec $MN06_DOGEC)"
 echo "CMN04  Conferme: $(Calcola_LP_Dogec $MN07_DOGEC) - $(Calcola_Status_Dogec $MN07_DOGEC) - $(Calcola_LastSeen_Dogec $MN07_DOGEC)"
 echo "CMN05  Conferme: $(Calcola_LP_Dogec $MN08_DOGEC) - $(Calcola_Status_Dogec $MN08_DOGEC) - $(Calcola_LastSeen_Dogec $MN08_DOGEC)"
-echo "CMN06  Conferme: $(Calcola_LP_Dogec $MN09_DOGEC) - $(Calcola_Status_Dogec $MN09_DOGEC) - $(Calcola_LastSeen_Dogec $MN09_DOGEC)"
+#echo "CMN06  Conferme: $(Calcola_LP_Dogec $MN09_DOGEC) - $(Calcola_Status_Dogec $MN09_DOGEC) - $(Calcola_LastSeen_Dogec $MN09_DOGEC)"
 echo "CMN07  Conferme: $(Calcola_LP_Dogec $MN10_DOGEC) - $(Calcola_Status_Dogec $MN10_DOGEC) - $(Calcola_LastSeen_Dogec $MN10_DOGEC)"
-echo "CMN08  Conferme: $(Calcola_LP_Dogec $MN11_DOGEC) - $(Calcola_Status_Dogec $MN11_DOGEC) - $(Calcola_LastSeen_Dogec $MN11_DOGEC)"
-echo "CMN09  Conferme: $(Calcola_LP_Dogec $MN12_DOGEC) - $(Calcola_Status_Dogec $MN12_DOGEC) - $(Calcola_LastSeen_Dogec $MN12_DOGEC)"
+#echo "CMN08  Conferme: $(Calcola_LP_Dogec $MN11_DOGEC) - $(Calcola_Status_Dogec $MN11_DOGEC) - $(Calcola_LastSeen_Dogec $MN11_DOGEC)"
+#echo "CMN09  Conferme: $(Calcola_LP_Dogec $MN12_DOGEC) - $(Calcola_Status_Dogec $MN12_DOGEC) - $(Calcola_LastSeen_Dogec $MN12_DOGEC)"
 echo "CMN10  Conferme: $(Calcola_LP_Dogec $MN13_DOGEC) - $(Calcola_Status_Dogec $MN13_DOGEC) - $(Calcola_LastSeen_Dogec $MN13_DOGEC)"
-echo "CMN11  Conferme: $(Calcola_LP_Dogec $MN14_DOGEC) - $(Calcola_Status_Dogec $MN14_DOGEC) - $(Calcola_LastSeen_Dogec $MN14_DOGEC)"
+#echo "CMN11  Conferme: $(Calcola_LP_Dogec $MN14_DOGEC) - $(Calcola_Status_Dogec $MN14_DOGEC) - $(Calcola_LastSeen_Dogec $MN14_DOGEC)"
 echo " "
 echo "Snd status"
 echo "Blocchi : $LB_SND / $TB_SND  Masternodes: $AN_SND"
