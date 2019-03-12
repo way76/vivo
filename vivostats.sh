@@ -31,9 +31,9 @@ Calcola_Attivi_Dogec()
 #AN_VIVO=$(su mnv -c  "vivo-cli masternode count enabled")
 #LB_VIVO=$(su mnv -c  "vivo-cli getblockcount")
 
-#TB_STONE=$(curl -s4 "http://explorer.stonecoin.rocks/api/getblockcount")
-#AN_STONE=$(stone-cli masternode count enabled)
-#LB_STONE=$(stone-cli getblockcount)
+TB_STONE=$(curl -s4 "http://explorer.stonecoin.rocks/api/getblockcount")
+AN_STONE=$(stone-cli masternode count enabled)
+LB_STONE=$(stone-cli getblockcount)
 
 #TB_INN=$(curl -s4 "http://explorer.innovacoin.info/api/getblockcount")
 #AN_INN=$(innova-cli masternode count enabled)
@@ -72,16 +72,20 @@ MN20_VIVO=2865988c23a8b9535250af9d7a538ee2d0cd0db4620b3b23e12e7a728661e085
 
 #definisco masternode stone
 MN01_STONE=59a6911cb6fd624e153042988e316b2976b51f11aa9aae0f5e382f235d225f02
-MN02_STONE=7d75e7df553f052cd15d3db3db0c737b29c933e69b4a866d56859eb5302e1435
-MN03_STONE=995b310d8482db84008672c0fc187269c1ba35ad7adfab2dd2b69fa99ad77d5a
-MN04_STONE=1a35b5606df79cf96707f9eed1533fffae063c15fcec7f72e54e13a4a59c23aa
-MN05_STONE=e6eec2792c191a774e63861cb6bda25a1bcaf48025f69a4ca1215f3871fb8dec
-MN06_STONE=e2c0ae32432651a7d4ed52139f2998336c4516b34b7987fa28b6279ec816a8bb
-MN07_STONE=9f943505513a69e32a9326ca015ef02f02d3bd5779a626a7050efa3c0b9d19cc
-MN08_STONE=54cc0800c10f1dd61875a4f3e9b9552aa97a5bb9b5fc31735ae09d91ba457243
-MN09_STONE=1a48f17dd3d022532e95ddba5b7556832117fcb63f2af562073afb7adc43d01e
-MN10_STONE=91c173890793471b4ef89b834e6161996142b2d857d84cfbe40a88967033f5e8
-MN11_STONE=f7641eabdbed2a8a0f8e540456807b7073409b802d024be69c3d77d0a010aef9
+MN02_STONE=995b310d8482db84008672c0fc187269c1ba35ad7adfab2dd2b69fa99ad77d5a
+MN03_STONE=e2c0ae32432651a7d4ed52139f2998336c4516b34b7987fa28b6279ec816a8bb
+MN04_STONE=200516a8458af2cc3876b4e29e4bffff0453886397da503763619e3bea8cfc3c
+MN05_STONE=7d75e7df553f052cd15d3db3db0c737b29c933e69b4a866d56859eb5302e1435
+MN06_STONE=fac5df2faa296f834931221245e1299b1556b97e6b85e038c1f7468e9e7eac11
+MN07_STONE=1a35b5606df79cf96707f9eed1533fffae063c15fcec7f72e54e13a4a59c23aa
+MN08_STONE=03ca24ff0a42fe3ec89119a0cf7ad4bb33d06c1b73f69e9ebb993814a85aad52
+MN09_STONE=08820f42d8d430149b7d133c4330a9922e047635aaa7447c522030622d924abe
+MN10_STONE=9f943505513a69e32a9326ca015ef02f02d3bd5779a626a7050efa3c0b9d19cc
+MN11_STONE=54cc0800c10f1dd61875a4f3e9b9552aa97a5bb9b5fc31735ae09d91ba457243
+MN12_STONE=1a48f17dd3d022532e95ddba5b7556832117fcb63f2af562073afb7adc43d01e
+MN13_STONE=91c173890793471b4ef89b834e6161996142b2d857d84cfbe40a88967033f5e8
+MN14_STONE=f7641eabdbed2a8a0f8e540456807b7073409b802d024be69c3d77d0a010aef9
+
 
 #definisco masternode Innova
 MN01_INN=504a6b8625e8c2b7492e3eb59e3da8fd1ba439105765729b02ebd8b51b73ed8a
@@ -412,25 +416,27 @@ clear
 #echo "Contabo_MN10_18  Conferme: $(Calcola_LP_Vivo $MN18_VIVO) - $(Calcola_Status_Vivo $MN18_VIVO) - $(Calcola_LastSeen_Vivo $MN18_VIVO)"
 #echo "Contabo_MN10_19  Conferme: $(Calcola_LP_Vivo $MN19_VIVO) - $(Calcola_Status_Vivo $MN19_VIVO) - $(Calcola_LastSeen_Vivo $MN19_VIVO)"
 #echo "Contabo_MN10_20  Conferme: $(Calcola_LP_Vivo $MN20_VIVO) - $(Calcola_Status_Vivo $MN20_VIVO) - $(Calcola_LastSeen_Vivo $MN20_VIVO)"
-
-
-
 #echo " "
-#echo "Stone status"
-#echo "Blocchi : $LB_STONE / $TB_STONE  Masternodes: $AN_STONE"
-#echo " "
-#echo "MN01  Conferme: $(Calcola_LP_Stone $MN01_STONE) - $(Calcola_Status_Stone $MN01_STONE) - $(Calcola_LastSeen_Stone $MN01_STONE)"
-#echo "MN02  Conferme: $(Calcola_LP_Stone $MN02_STONE) - $(Calcola_Status_Stone $MN02_STONE) - $(Calcola_LastSeen_Stone $MN02_STONE)"
-#echo "MN03  Conferme: $(Calcola_LP_Stone $MN03_STONE) - $(Calcola_Status_Stone $MN03_STONE) - $(Calcola_LastSeen_Stone $MN03_STONE)"
-#echo "MN04  Conferme: $(Calcola_LP_Stone $MN04_STONE) - $(Calcola_Status_Stone $MN04_STONE) - $(Calcola_LastSeen_Stone $MN04_STONE)"
-#echo "MN05  Conferme: $(Calcola_LP_Stone $MN05_STONE) - $(Calcola_Status_Stone $MN05_STONE) - $(Calcola_LastSeen_Stone $MN05_STONE)"
-#echo "MN06  Conferme: $(Calcola_LP_Stone $MN06_STONE) - $(Calcola_Status_Stone $MN06_STONE) - $(Calcola_LastSeen_Stone $MN06_STONE)"
-#echo "MN07  Conferme: $(Calcola_LP_Stone $MN07_STONE) - $(Calcola_Status_Stone $MN07_STONE) - $(Calcola_LastSeen_Stone $MN07_STONE)"
-#echo "MN08  Conferme: $(Calcola_LP_Stone $MN08_STONE) - $(Calcola_Status_Stone $MN08_STONE) - $(Calcola_LastSeen_Stone $MN08_STONE)"
-#echo "MN09  Conferme: $(Calcola_LP_Stone $MN09_STONE) - $(Calcola_Status_Stone $MN09_STONE) - $(Calcola_LastSeen_Stone $MN09_STONE)"
-#echo "MN10  Conferme: $(Calcola_LP_Stone $MN10_STONE) - $(Calcola_Status_Stone $MN10_STONE) - $(Calcola_LastSeen_Stone $MN10_STONE)"
-#echo "MN11  Conferme: $(Calcola_LP_Stone $MN11_STONE) - $(Calcola_Status_Stone $MN11_STONE) - $(Calcola_LastSeen_Stone $MN11_STONE)"
-#echo " "
+
+echo "Stone status"
+echo "Blocchi : $LB_STONE / $TB_STONE  Masternodes: $AN_STONE"
+echo " "
+echo " MN01  Conferme: $(Calcola_LP_Stone $MN01_STONE) - $(Calcola_Status_Stone $MN01_STONE) - $(Calcola_LastSeen_Stone $MN01_STONE)"
+echo " MN03  Conferme: $(Calcola_LP_Stone $MN02_STONE) - $(Calcola_Status_Stone $MN02_STONE) - $(Calcola_LastSeen_Stone $MN02_STONE)"
+echo " MN06  Conferme: $(Calcola_LP_Stone $MN03_STONE) - $(Calcola_Status_Stone $MN03_STONE) - $(Calcola_LastSeen_Stone $MN03_STONE)"
+echo "CMN01  Conferme: $(Calcola_LP_Stone $MN04_STONE) - $(Calcola_Status_Stone $MN04_STONE) - $(Calcola_LastSeen_Stone $MN04_STONE)"
+echo "CMN02  Conferme: $(Calcola_LP_Stone $MN05_STONE) - $(Calcola_Status_Stone $MN05_STONE) - $(Calcola_LastSeen_Stone $MN05_STONE)"
+echo "CMN03  Conferme: $(Calcola_LP_Stone $MN06_STONE) - $(Calcola_Status_Stone $MN06_STONE) - $(Calcola_LastSeen_Stone $MN06_STONE)"
+echo "CMN04  Conferme: $(Calcola_LP_Stone $MN07_STONE) - $(Calcola_Status_Stone $MN07_STONE) - $(Calcola_LastSeen_Stone $MN07_STONE)"
+echo "CMN05  Conferme: $(Calcola_LP_Stone $MN08_STONE) - $(Calcola_Status_Stone $MN08_STONE) - $(Calcola_LastSeen_Stone $MN08_STONE)"
+echo "CMN06  Conferme: $(Calcola_LP_Stone $MN09_STONE) - $(Calcola_Status_Stone $MN09_STONE) - $(Calcola_LastSeen_Stone $MN09_STONE)"
+echo "CMN07  Conferme: $(Calcola_LP_Stone $MN10_STONE) - $(Calcola_Status_Stone $MN10_STONE) - $(Calcola_LastSeen_Stone $MN10_STONE)"
+echo "CMN08  Conferme: $(Calcola_LP_Stone $MN11_STONE) - $(Calcola_Status_Stone $MN11_STONE) - $(Calcola_LastSeen_Stone $MN11_STONE)"
+echo "CMN09  Conferme: $(Calcola_LP_Stone $MN12_STONE) - $(Calcola_Status_Stone $MN12_STONE) - $(Calcola_LastSeen_Stone $MN12_STONE)"
+echo "CMN10  Conferme: $(Calcola_LP_Stone $MN13_STONE) - $(Calcola_Status_Stone $MN13_STONE) - $(Calcola_LastSeen_Stone $MN13_STONE)"
+echo "CMN11  Conferme: $(Calcola_LP_Stone $MN14_STONE) - $(Calcola_Status_Stone $MN14_STONE) - $(Calcola_LastSeen_Stone $MN14_STONE)"
+echo " "
+
 #echo "Innova status"
 #echo "Blocchi : $LB_INN / $TB_INN  Masternodes: $AN_INN"
 #echo " "
@@ -467,17 +473,17 @@ echo " "
 echo "Snd status"
 echo "Blocchi : $LB_SND / $TB_SND  Masternodes: $AN_SND"
 echo " "
-echo "MN12  Conferme: $(Calcola_LP_Snd $MN12_SND) - $(Calcola_Status_Snd $MN12_SND) - $(Calcola_LastSeen_Snd $MN12_SND)"
-echo "MN13  Conferme: $(Calcola_LP_Snd $MN13_SND) - $(Calcola_Status_Snd $MN13_SND) - $(Calcola_LastSeen_Snd $MN13_SND)"
-echo "MN14  Conferme: $(Calcola_LP_Snd $MN14_SND) - $(Calcola_Status_Snd $MN14_SND) - $(Calcola_LastSeen_Snd $MN14_SND)"
-echo "MN01  Conferme: $(Calcola_LP_Snd $MN01_SND) - $(Calcola_Status_Snd $MN01_SND) - $(Calcola_LastSeen_Snd $MN01_SND)"
-echo "MN02  Conferme: $(Calcola_LP_Snd $MN02_SND) - $(Calcola_Status_Snd $MN02_SND) - $(Calcola_LastSeen_Snd $MN02_SND)"
-echo "MN03  Conferme: $(Calcola_LP_Snd $MN03_SND) - $(Calcola_Status_Snd $MN03_SND) - $(Calcola_LastSeen_Snd $MN03_SND)"
-echo "MN04  Conferme: $(Calcola_LP_Snd $MN04_SND) - $(Calcola_Status_Snd $MN04_SND) - $(Calcola_LastSeen_Snd $MN04_SND)"
-echo "MN05  Conferme: $(Calcola_LP_Snd $MN05_SND) - $(Calcola_Status_Snd $MN05_SND) - $(Calcola_LastSeen_Snd $MN05_SND)"
-echo "MN06  Conferme: $(Calcola_LP_Snd $MN06_SND) - $(Calcola_Status_Snd $MN06_SND) - $(Calcola_LastSeen_Snd $MN06_SND)"
-echo "MN07  Conferme: $(Calcola_LP_Snd $MN07_SND) - $(Calcola_Status_Snd $MN07_SND) - $(Calcola_LastSeen_Snd $MN07_SND)"
-echo "MN08  Conferme: $(Calcola_LP_Snd $MN08_SND) - $(Calcola_Status_Snd $MN08_SND) - $(Calcola_LastSeen_Snd $MN08_SND)"
-echo "MN09  Conferme: $(Calcola_LP_Snd $MN09_SND) - $(Calcola_Status_Snd $MN09_SND) - $(Calcola_LastSeen_Snd $MN09_SND)"
-echo "MN10  Conferme: $(Calcola_LP_Snd $MN10_SND) - $(Calcola_Status_Snd $MN10_SND) - $(Calcola_LastSeen_Snd $MN10_SND)"
-echo "MN11  Conferme: $(Calcola_LP_Snd $MN11_SND) - $(Calcola_Status_Snd $MN11_SND) - $(Calcola_LastSeen_Snd $MN11_SND)"
+echo " MN01  Conferme: $(Calcola_LP_Snd $MN12_SND) - $(Calcola_Status_Snd $MN12_SND) - $(Calcola_LastSeen_Snd $MN12_SND)"
+echo " MN03  Conferme: $(Calcola_LP_Snd $MN13_SND) - $(Calcola_Status_Snd $MN13_SND) - $(Calcola_LastSeen_Snd $MN13_SND)"
+echo " MN06  Conferme: $(Calcola_LP_Snd $MN14_SND) - $(Calcola_Status_Snd $MN14_SND) - $(Calcola_LastSeen_Snd $MN14_SND)"
+echo "CMN01  Conferme: $(Calcola_LP_Snd $MN01_SND) - $(Calcola_Status_Snd $MN01_SND) - $(Calcola_LastSeen_Snd $MN01_SND)"
+echo "CMN02  Conferme: $(Calcola_LP_Snd $MN02_SND) - $(Calcola_Status_Snd $MN02_SND) - $(Calcola_LastSeen_Snd $MN02_SND)"
+echo "CMN03  Conferme: $(Calcola_LP_Snd $MN03_SND) - $(Calcola_Status_Snd $MN03_SND) - $(Calcola_LastSeen_Snd $MN03_SND)"
+echo "CMN04  Conferme: $(Calcola_LP_Snd $MN04_SND) - $(Calcola_Status_Snd $MN04_SND) - $(Calcola_LastSeen_Snd $MN04_SND)"
+echo "CMN05  Conferme: $(Calcola_LP_Snd $MN05_SND) - $(Calcola_Status_Snd $MN05_SND) - $(Calcola_LastSeen_Snd $MN05_SND)"
+echo "CMN06  Conferme: $(Calcola_LP_Snd $MN06_SND) - $(Calcola_Status_Snd $MN06_SND) - $(Calcola_LastSeen_Snd $MN06_SND)"
+echo "CMN07  Conferme: $(Calcola_LP_Snd $MN07_SND) - $(Calcola_Status_Snd $MN07_SND) - $(Calcola_LastSeen_Snd $MN07_SND)"
+echo "CMN08  Conferme: $(Calcola_LP_Snd $MN08_SND) - $(Calcola_Status_Snd $MN08_SND) - $(Calcola_LastSeen_Snd $MN08_SND)"
+echo "CMN09  Conferme: $(Calcola_LP_Snd $MN09_SND) - $(Calcola_Status_Snd $MN09_SND) - $(Calcola_LastSeen_Snd $MN09_SND)"
+echo "CMN10  Conferme: $(Calcola_LP_Snd $MN10_SND) - $(Calcola_Status_Snd $MN10_SND) - $(Calcola_LastSeen_Snd $MN10_SND)"
+echo "CMN11  Conferme: $(Calcola_LP_Snd $MN11_SND) - $(Calcola_Status_Snd $MN11_SND) - $(Calcola_LastSeen_Snd $MN11_SND)"
